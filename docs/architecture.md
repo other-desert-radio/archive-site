@@ -13,10 +13,13 @@ This repository is a small static Astro site. The current implementation is inte
 
 ```text
 src/
-└── pages/              File-based routes; `index.astro` is `/`
+├── layouts/            Shared page shells; `BaseLayout.astro` owns global CSS
+├── pages/              File-based routes; `index.astro` is `/`
+└── styles/             Global stylesheet and shared design tokens
 
 public/                 Static assets copied to the site root unchanged
-└── background.jpeg
+├── background.jpeg
+└── fonts/              WOFF2 webfont files and the Space Mono license
 
 scripts/                Repository maintenance scripts
 └── setup-hooks.sh
@@ -29,9 +32,9 @@ dist/                   Generated static build output (do not edit by hand)
 
 ## Request and rendering flow
 
-For the current site, a browser requests `/`, Astro resolves that URL to `src/pages/index.astro`, and the build emits a static `dist/index.html`. Files in `public/` are available at root-relative URLs, such as `/background.jpeg`.
+For the current site, a browser requests `/`, Astro resolves that URL to `src/pages/index.astro`, and the build emits a static `dist/index.html`. `src/layouts/BaseLayout.astro` provides the document shell and imports `src/styles/global.css`, which registers Space Mono and applies the base font to the page. Files in `public/` are available at root-relative URLs, such as `/background.jpeg` and `/fonts/space-mono-regular.woff2`.
 
-As routes are added, place them under `src/pages/` using Astro's file-based routing. Shared presentation should move into `src/components/`; reusable data or content can live in a dedicated `src/` module or Astro content collection when the project needs one. Keep browser-only interactivity isolated to React components or client-side scripts rather than introducing a runtime dependency for otherwise static pages.
+As routes are added, place them under `src/pages/` using Astro's file-based routing and wrap them in `BaseLayout.astro` so the global styles and document metadata are consistently applied. Shared presentation should move into `src/components/`; reusable data or content can live in a dedicated `src/` module or Astro content collection when the project needs one. Keep browser-only interactivity isolated to React components or client-side scripts rather than introducing a runtime dependency for otherwise static pages.
 
 ## Development and quality checks
 
