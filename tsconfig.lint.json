@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "skipLibCheck": true
+  },
+  "include": ["astro.config.mjs", "src/**/*.ts", "src/**/*.tsx"],
+  "exclude": [".astro", "dist", "node_modules"]
+}

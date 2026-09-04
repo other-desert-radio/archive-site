@@ -8,6 +8,12 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "lint": "bun run lint:format && bun run lint:shell && bun run lint:eslint && bun run lint:types",
+    "lint:format": "prettier --check .",
+    "lint:eslint": "eslint .",
+    "lint:shell": "find .githooks scripts -type f -exec sh -n {} +",
+    "lint:types": "tsc --noEmit --project tsconfig.lint.json",
+    "prepare": "./scripts/setup-hooks.sh",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -21,5 +27,16 @@
   },
   "allowScripts": {
     "esbuild": true
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.10.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-astro": "^3.1.0",
+    "prettier": "^3.9.6",
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript": "^7.0.2",
+    "typescript-eslint": "^8.69.0"
   }
 }
