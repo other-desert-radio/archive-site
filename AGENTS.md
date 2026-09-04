@@ -10,6 +10,8 @@ Manage the background server with `astro dev stop`, `astro dev status`, and `ast
 
 ## Documentation
 
+Repository architecture reference: [docs/architecture.md](docs/architecture.md). Read it before making structural changes and keep it current when the site architecture evolves.
+
 Full documentation: https://docs.astro.build
 
 Consult these guides before working on related tasks:
