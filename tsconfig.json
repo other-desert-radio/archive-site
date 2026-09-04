@@ -28,5 +28,7 @@
 
     "noEmit": true,
     "skipLibCheck": false
-  }
+  },
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist"]
 }
