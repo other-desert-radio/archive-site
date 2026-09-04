@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+.bun/
+
+# Astro build output and generated types
+dist/
+.astro/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Test and coverage output
+coverage/
+
+# Logs
+*.log
+*.log.*
+
+# Local editor and operating-system files
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
