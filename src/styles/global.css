@@ -45,5 +45,6 @@
 
 body {
 	margin: 0;
-	background: url("/background.jpeg") center / cover no-repeat fixed;
+	background:
+		url("/background.jpeg") center / cover no-repeat fixed;
 }
