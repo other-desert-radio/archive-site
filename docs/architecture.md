@@ -6,6 +6,7 @@ This repository is a small static Astro site. The current implementation is inte
 
 - Astro is the application framework and build tool.
 - `astro.config.mjs` sets `output: "static"`, so production output is pre-rendered into `dist/` and does not require a server runtime.
+- `.github/workflows/deploy-pages.yml` builds the static site with Bun and deploys `dist/` to GitHub Pages on pushes to `main`.
 - `@astrojs/react` is configured for interactive React components when they are needed; the current page does not use one.
 - The project targets Node.js `>=22.12.0` and uses Bun for package scripts and lockfile management.
 
