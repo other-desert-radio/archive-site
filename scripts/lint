@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+./node_modules/.bin/biome check .
+bun run lint:shell
+bun run lint:eslint
+bun run lint:types
