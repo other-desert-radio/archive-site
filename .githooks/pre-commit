@@ -1,5 +1,5 @@
-#!/bin/sh
+#!/usr/bin/env bash
+set -euo pipefail
 
-set -eu
-
-exec bun run lint
+bun run format
+bun run lint
