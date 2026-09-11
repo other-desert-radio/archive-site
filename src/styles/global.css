@@ -45,5 +45,6 @@
 
 body {
 	margin: 0;
-	background: url("/archive-site/background.jpeg") center / cover no-repeat fixed;
+	background:
+		url("/archive-site/background.jpeg") center / cover no-repeat fixed;
 }
