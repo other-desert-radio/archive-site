@@ -2,4 +2,5 @@
 set -euo pipefail
 
 bun run format
+git add .
 bun run lint
