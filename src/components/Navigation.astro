@@ -4,18 +4,40 @@ type Props = {
   returning_page: "archive" | "home";
 };
 
-const { page } = Astro.props;
+const { page, returning_page } = Astro.props;
 ---
 
 <nav aria-label="Navigation title">
-  <p>{page}</p>
-  <p>foobar</p>
+  <div class="leading-box">
+    <img
+      class="back-arrow"
+      src={`${import.meta.env.BASE_URL}back-arrow.svg`}
+      alt="Back"
+    />
+    <b>{returning_page.toUpperCase()}</b>
+  </div>
+
+  OTHER DESERT RADIO / {page.toUpperCase()}
 </nav>
 
 <style>
   nav {
     display: flex;
+    padding: 25px 50px;
+    align-items: center;
+    gap: 25px;
+
     background: black;
     color: white;
+  }
+
+  .leading-box {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .back-arrow {
+    width: 20px;
   }
 </style>
