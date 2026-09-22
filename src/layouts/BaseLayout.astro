@@ -1,6 +1,19 @@
 ---
-const { lang = "en", title = "Archive Site" } = Astro.props;
+type Props = {
+	lang?: string;
+	title?: string;
+	page?: "archive" | "dj_page";
+	returning_page?: "archive" | "home";
+};
+
+const {
+	lang = "en",
+	title = "Archive Site",
+	page = "archive",
+	returning_page = "home",
+} = Astro.props;
 import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
 ---
 
 <!doctype html>
@@ -11,6 +24,7 @@ import "../styles/global.css";
 		<title>{title}</title>
 	</head>
 	<body>
+		<Navigation page={page} returning_page={returning_page} />
 		<slot />
 	</body>
 </html>

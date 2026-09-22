@@ -39,7 +39,7 @@ As routes are added, place them under `src/pages/` using Astro's file-based rout
 
 ## Development and quality checks
 
-- Start development with `astro dev --background` as documented in the repository instructions.
+- Start development with `bun run dev`. The script starts Astro with `astro dev --background` and runs `astro check --watch` alongside it, so type errors in `.astro` files appear in the terminal while developing.
 - Use `astro dev status`, `astro dev logs`, and `astro dev stop` to manage the background server.
 - `bun run build` creates the production static site.
 - `bun run lint` runs formatting, shell syntax, ESLint, and TypeScript checks.

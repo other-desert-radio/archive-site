@@ -1,0 +1,21 @@
+---
+type Props = {
+  page: "archive" | "dj_page";
+  returning_page: "archive" | "home";
+};
+
+const { page } = Astro.props;
+---
+
+<nav aria-label="Navigation title">
+  <p>{page}</p>
+  <p>foobar</p>
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    background: black;
+    color: white;
+  }
+</style>
