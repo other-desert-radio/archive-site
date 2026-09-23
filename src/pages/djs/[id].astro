@@ -26,6 +26,17 @@ export async function getStaticPaths() {
 
 const { dj } = Astro.props as Props;
 const tags = await fetchTags(pathToFileURL("public/archive/tags.json"));
+
+const hydratedTags = dj.tagIds.flatMap((id) => {
+  const tag = tags.get(id);
+
+  if (tag === undefined) {
+    console.error(`Tag ${id} referenced by DJ ${dj.id} does not exist.`);
+    return [];
+  }
+
+  return [tag];
+});
 ---
 
 <BaseLayout
@@ -33,23 +44,62 @@ const tags = await fetchTags(pathToFileURL("public/archive/tags.json"));
   returning_page="djs"
   title={`${dj.title} | Other Desert Radio`}
 >
-  <h1>{dj.title}</h1>
-  <div class="tag-container">
-    {
-      dj.tagIds.map((id) => {
-        const tag = tags.get(id);
-
-        if (tag === undefined) {
-          console.error(`Tag ${id} referenced by DJ ${dj.id} does not exist.`);
-          return undefined;
-        }
-
-        return <TagView tag={tag} />;
-      })
-    }
+  <div class="container">
+    <h1 class="page-title">{dj.title}</h1>
+    <div class="leading-container">
+      <div class="photo-placeholder"></div>
+      <div class="tag-container">
+        {hydratedTags.map((tag) => <TagView tag={tag} />)}
+      </div>
+      <div set:html={dj.socials} />
+    </div>
+    <div class="trailing-container">
+      <div set:html={dj.bio} />
+      <p>{dj.showTitle}</p>
+      <p>{dj.showDescription}</p>
+    </div>
   </div>
-  <div set:html={dj.socials} />
-  <div set:html={dj.bio} />
-  <p>{dj.showTitle}</p>
-  <p>{dj.showDescription}</p>
 </BaseLayout>
+
+<style>
+  .container {
+    display: grid;
+    grid-template-columns: minmax(min(300px, 100%), 300px) minmax(0, 1fr);
+    column-gap: 1rem;
+  }
+
+  .page-title {
+    grid-column: 1 / -1;
+  }
+
+  /* set:html paragraphs do not receive Astro's scoped style attribute. */
+  .container :global(p) {
+    margin: 0 !important;
+  }
+
+  .photo-placeholder {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1;
+    background-color: #bebebe;
+    border: 6px solid black;
+  }
+
+  .leading-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .trailing-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
