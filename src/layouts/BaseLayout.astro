@@ -1,30 +1,28 @@
 ---
 type Props = {
-	lang?: string;
-	title?: string;
-	page?: "archive" | "dj_page";
-	returning_page?: "archive" | "home";
+  title: string;
+  page: "archive" | "dj_page";
+  returning_page: "archive" | "home";
 };
 
 const {
-	lang = "en",
-	title = "Archive Site",
-	page = "archive",
-	returning_page = "home",
+  title = "Archive Site",
+  page = "archive",
+  returning_page = "home",
 } = Astro.props;
 import "../styles/global.css";
 import Navigation from "../components/Navigation.astro";
 ---
 
 <!doctype html>
-<html lang={lang}>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>{title}</title>
-	</head>
-	<body>
-		<Navigation page={page} returning_page={returning_page} />
-		<slot />
-	</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Navigation page={page} returning_page={returning_page} />
+    <slot />
+  </body>
 </html>
