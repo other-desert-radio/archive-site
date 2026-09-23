@@ -23,6 +23,14 @@ import Navigation from "../components/Navigation.astro";
   </head>
   <body>
     <Navigation page={page} returning_page={returning_page} />
-    <slot />
+    <main>
+      <slot />
+    </main>
   </body>
 </html>
+
+<style>
+  main {
+    padding-inline: 6rem;
+  }
+</style>

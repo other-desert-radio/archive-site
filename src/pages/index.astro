@@ -1,7 +1,10 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import CategoryTabs from "../components/CategoryTabs.astro";
 ---
 
+<!-- This is the shows page -->
 <BaseLayout title="Archive Site" page="archive" returning_page="home">
+  <CategoryTabs active="shows" />
   <p>TODO</p>
 </BaseLayout>

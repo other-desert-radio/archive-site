@@ -33,6 +33,10 @@ dist/                   Generated static build output (do not edit by hand)
 
 ## Request and rendering flow
 
+The archive listings use `src/pages/index.astro` for SHOWS and
+`src/pages/djs.astro` for DJs. Both use `CategoryTabs.astro` to select the
+active category; the DJ page currently contains placeholder listing content.
+
 For the current site, a browser requests `/`, Astro resolves that URL to `src/pages/index.astro`, and the build emits a static `dist/index.html`. `src/layouts/BaseLayout.astro` provides the document shell and imports `src/styles/global.css`, which registers Space Mono and applies the base font to the page. Files in `public/` are available at root-relative URLs, such as `/background.jpeg` and `/fonts/space-mono-regular.woff2`.
 
 As routes are added, place them under `src/pages/` using Astro's file-based routing and wrap them in `BaseLayout.astro` so the global styles and document metadata are consistently applied. Shared presentation should move into `src/components/`; reusable data or content can live in a dedicated `src/` module or Astro content collection when the project needs one. Keep browser-only interactivity isolated to React components or client-side scripts rather than introducing a runtime dependency for otherwise static pages.
