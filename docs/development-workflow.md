@@ -35,6 +35,9 @@ changes materially.
 
 ## Verification by change type
 
+- `bun run format` applies Biome formatting, safe lint fixes, and import
+  organization. The pre-commit hook runs it before staging the resulting
+  changes.
 - Astro pages, layouts, or content: `bun run check`
 - TypeScript, CSS, JavaScript, or configuration: `bun run lint`
 - Routing, deployment configuration, or production behavior: `bun run build`

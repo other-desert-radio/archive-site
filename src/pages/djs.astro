@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CategoryTabs from "../components/CategoryTabs.astro";
+import DJsPane from "../components/DJsPane.tsx";
 ---
 
 <BaseLayout
@@ -9,5 +10,5 @@ import CategoryTabs from "../components/CategoryTabs.astro";
   returning_page="home"
 >
   <CategoryTabs active="djs" />
-  <p>DJ search and list go here.</p>
+  <DJsPane client:load />
 </BaseLayout>

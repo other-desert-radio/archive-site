@@ -3,7 +3,8 @@
 	"compilerOptions": {
 		"allowJs": true,
 		"checkJs": true,
-		"skipLibCheck": true
+		"skipLibCheck": true,
+		"types": ["astro/client"]
 	},
 	"include": ["astro.config.mjs", "src/**/*.ts", "src/**/*.tsx"],
 	"exclude": [".astro", "dist", "node_modules"]
