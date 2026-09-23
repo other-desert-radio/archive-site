@@ -65,7 +65,7 @@ const hydratedTags = dj.tagIds.flatMap((id) => {
   .container {
     display: grid;
     grid-template-columns: minmax(min(300px, 100%), 300px) minmax(0, 1fr);
-    column-gap: 1rem;
+    column-gap: 2rem;
   }
 
   .page-title {
@@ -95,6 +95,12 @@ const hydratedTags = dj.tagIds.flatMap((id) => {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+  }
+
+  @media (max-width: 750px) {
+    .container {
+      column-gap: 1rem;
+    }
   }
 
   @media (max-width: 600px) {
