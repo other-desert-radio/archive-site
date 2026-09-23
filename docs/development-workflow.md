@@ -10,6 +10,10 @@ independently.
 - Keep unrelated routing, content, styling, and interaction changes separate.
 - Add or update documentation in the same chunk when behavior or workflow
   changes.
+- Add or update focused automated tests whenever introducing a feature or
+  changing existing behavior. If a behavior cannot be tested practically,
+  explain why in the handoff.
+- Place headless tests in the top-level `tests/` directory.
 - Run the smallest relevant verification commands before handing off the
   chunk.
 - Stop after the chunk is complete so it can be reviewed before the next
@@ -40,6 +44,7 @@ changes materially.
   changes.
 - Astro pages, layouts, or content: `bun run check`
 - TypeScript, CSS, JavaScript, or configuration: `bun run lint`
+- Unit-tested behavior: `bun run test`
 - Routing, deployment configuration, or production behavior: `bun run build`
 - Broad changes: run `bun run lint`, `bun run check`, and `bun run build`
 

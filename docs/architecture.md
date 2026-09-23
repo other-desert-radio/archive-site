@@ -42,9 +42,10 @@ The archive listings use `src/pages/index.astro` for SHOWS and
 `src/pages/djs.astro` for DJs. Both use `CategoryTabs.astro` to select the
 active category. `src/utils/fetch-djs.ts` reads and validates
 `public/archive/djs_brief.json` at build time. The DJ page passes its summaries
-to the server-rendered `DJsPane` component, and `src/pages/djs/[id].astro`
-generates one static detail page per DJ in that manifest; it currently renders
-a minimal placeholder while the profile UI is built.
+to the server-rendered `DJsPane` component, which links each title to its
+static detail page. `src/pages/djs/[id].astro` generates one static detail page
+per DJ in that manifest; it currently renders a minimal placeholder while the
+profile UI is built.
 
 For the current site, a browser requests `/`, Astro resolves that URL to `src/pages/index.astro`, and the build emits a static `dist/index.html`. `src/layouts/BaseLayout.astro` provides the document shell and imports `src/styles/global.css`, which registers Space Mono and applies the base font to the page. Files in `public/` are available at root-relative URLs, such as `/background.jpeg` and `/fonts/space-mono-regular.woff2`.
 
