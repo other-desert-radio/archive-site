@@ -1,8 +1,10 @@
 ---
 import { pathToFileURL } from "node:url";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import TagView from "../../components/TagView.astro";
 import { fetchDJ, type HydratedDJ } from "../../utils/fetch-dj";
 import { fetchDJs } from "../../utils/fetch-djs";
+import { fetchTags } from "../../utils/fetch-tags";
 
 type Props = {
   dj: HydratedDJ;
@@ -23,6 +25,7 @@ export async function getStaticPaths() {
 }
 
 const { dj } = Astro.props as Props;
+const tags = await fetchTags(pathToFileURL("public/archive/tags.json"));
 ---
 
 <BaseLayout
@@ -31,8 +34,22 @@ const { dj } = Astro.props as Props;
   title={`${dj.title} | Other Desert Radio`}
 >
   <h1>{dj.title}</h1>
-  <p>{dj.socials}</p>
-  <p>{dj.bio}</p>
+  <div class="tag-container">
+    {
+      dj.tagIds.map((id) => {
+        const tag = tags.get(id);
+
+        if (tag === undefined) {
+          console.error(`Tag ${id} referenced by DJ ${dj.id} does not exist.`);
+          return undefined;
+        }
+
+        return <TagView tag={tag} />;
+      })
+    }
+  </div>
+  <div set:html={dj.socials} />
+  <div set:html={dj.bio} />
   <p>{dj.showTitle}</p>
   <p>{dj.showDescription}</p>
 </BaseLayout>

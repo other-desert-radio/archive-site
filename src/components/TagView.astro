@@ -1,0 +1,13 @@
+---
+import type { Tag } from "../utils/fetch-tags";
+
+type Props = {
+  tag: Tag;
+};
+
+const { tag } = Astro.props as Props;
+---
+
+<div class="tag" style={`background-color: ${tag.color}`}>
+  {tag.title}
+</div>
