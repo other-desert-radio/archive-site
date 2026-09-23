@@ -5,21 +5,21 @@ import { fetchDJ, type HydratedDJ } from "../../utils/fetch-dj";
 import { fetchDJs } from "../../utils/fetch-djs";
 
 type Props = {
-	dj: HydratedDJ;
+  dj: HydratedDJ;
 };
 
 /** Generates static DJ detail pages from the archive summary during Astro builds. */
 export async function getStaticPaths() {
-	const djs = await fetchDJs(pathToFileURL("public/archive/djs_brief.json"));
+  const djs = await fetchDJs(pathToFileURL("public/archive/djs_brief.json"));
 
-	return Promise.all(
-		djs.map(async ({ id }) => ({
-			params: { id: String(id) },
-			props: {
-				dj: await fetchDJ(pathToFileURL(`public/archive/djs/${id}.json`)),
-			},
-		})),
-	);
+  return Promise.all(
+    djs.map(async ({ id }) => ({
+      params: { id: String(id) },
+      props: {
+        dj: await fetchDJ(pathToFileURL(`public/archive/djs/${id}.json`)),
+      },
+    })),
+  );
 }
 
 const { dj } = Astro.props as Props;
@@ -31,5 +31,8 @@ const { dj } = Astro.props as Props;
   title={`${dj.title} | Other Desert Radio`}
 >
   <h1>{dj.title}</h1>
-  <p>DJ details coming soon.</p>
+  <p>{dj.socials}</p>
+  <p>{dj.bio}</p>
+  <p>{dj.showTitle}</p>
+  <p>{dj.showDescription}</p>
 </BaseLayout>
