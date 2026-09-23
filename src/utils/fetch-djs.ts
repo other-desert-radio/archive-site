@@ -5,6 +5,7 @@ const DJPattern = {
 	id: P.number,
 	title: P.string,
 	image: P.string,
+	tagIds: P.array(P.number),
 };
 
 export type DJ = P.infer<typeof DJPattern>;

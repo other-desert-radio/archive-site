@@ -4,7 +4,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import CategoryTabs from "../components/CategoryTabs.astro";
 import DJsPane from "../components/DJsPane.tsx";
 import { fetchDJs } from "../utils/fetch-djs";
+import { fetchTags } from "../utils/fetch-tags";
 
+const tags = await fetchTags(pathToFileURL("public/archive/tags.json"));
 const djs = await fetchDJs(pathToFileURL("public/archive/djs_brief.json"));
 const base = import.meta.env.BASE_URL;
 ---
@@ -15,5 +17,5 @@ const base = import.meta.env.BASE_URL;
   returning_page="home"
 >
   <CategoryTabs active="djs" />
-  <DJsPane base={base} djs={djs} />
+  <DJsPane base={base} djs={djs} tags={tags} />
 </BaseLayout>

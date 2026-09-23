@@ -21,3 +21,19 @@ select,
 textarea {
 	font: inherit;
 }
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.tag {
+	padding: 0px 5px;
+}
+
+.tag-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
