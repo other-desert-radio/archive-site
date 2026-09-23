@@ -1,4 +1,6 @@
 ---
+import { ClientRouter } from "astro:transitions";
+
 type Props = {
   title: string;
   page: "archive" | "dj_page";
@@ -11,6 +13,7 @@ const {
   returning_page = "home",
 } = Astro.props;
 import "../styles/global.css";
+import "../styles/styles.css";
 import Navigation from "../components/Navigation.astro";
 ---
 
@@ -20,9 +23,20 @@ import Navigation from "../components/Navigation.astro";
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
+    <ClientRouter />
   </head>
-  <body>
+  <body transition:animate="none">
     <Navigation page={page} returning_page={returning_page} />
-    <slot />
+    <main>
+      <slot />
+    </main>
   </body>
 </html>
+
+<style>
+  main {
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 6rem;
+  }
+</style>

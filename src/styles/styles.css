@@ -1,0 +1,23 @@
+html {
+	font-size: 100%;
+}
+
+body {
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+small {
+	font-size: 0.875rem;
+}
+
+button,
+input,
+select,
+textarea {
+	font: inherit;
+}
