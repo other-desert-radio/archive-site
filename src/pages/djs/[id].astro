@@ -1,31 +1,16 @@
 ---
-import { readFile } from "node:fs/promises";
-import { isMatching, P } from "ts-pattern";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-
-type DJSummary = {
-  id: number;
-  title: string;
-};
+import { fetchDJs, type DJ } from "../../utils/fetch-djs";
 
 type Props = {
-  dj: DJSummary;
+	dj: DJ;
 };
 
 /** Generates static DJ detail pages from the archive summary during Astro builds. */
 export async function getStaticPaths() {
-  const djSummaryFile = new URL(
-    "../../../public/archive/djs_brief.json",
-    import.meta.url,
-  );
-  const source = await readFile(djSummaryFile, "utf8");
-  const data: unknown = JSON.parse(source);
+	const djs = await fetchDJs();
 
-  if (!isMatching(P.array({ id: P.number, title: P.string }), data)) {
-    throw new Error("DJ summary data has an unexpected format.");
-  }
-
-  return data.map((dj) => ({
+	return djs.map((dj) => ({
     params: { id: String(dj.id) },
     props: { dj },
   }));

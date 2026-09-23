@@ -2,6 +2,9 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CategoryTabs from "../components/CategoryTabs.astro";
 import DJsPane from "../components/DJsPane.tsx";
+import { fetchDJs } from "../utils/fetch-djs";
+
+const djs = await fetchDJs();
 ---
 
 <BaseLayout
@@ -10,5 +13,5 @@ import DJsPane from "../components/DJsPane.tsx";
   returning_page="home"
 >
   <CategoryTabs active="djs" />
-  <DJsPane client:load />
+  <DJsPane djs={djs} />
 </BaseLayout>
