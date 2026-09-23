@@ -1,19 +1,24 @@
 ---
 type Props = {
   page: "archive" | "dj_page";
-  returning_page: "archive" | "home";
+  returning_page: "archive" | "djs" | "home";
 };
 
 const { page, returning_page } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const returnHref =
+  returning_page === "home"
+    ? "https://otherdesertradio.com"
+    : returning_page === "djs"
+      ? `${base}/djs`
+      : `${base}/`; // TODO: collapse this
 ---
 
 <nav aria-label="Navigation title">
   <a
     class="leading-box"
     title={`Return to ${returning_page}`}
-    href={returning_page === "archive"
-      ? `${import.meta.env.BASE_URL}archive`
-      : "https://otherdesertradio.com"}
+    href={returnHref}
   >
     <span aria-hidden="true">←</span>
     <b>{returning_page.toUpperCase()}</b>

@@ -58,6 +58,20 @@ Do not use unchecked casts to make external data fit a type. Validate or
 normalize external data at the boundary, then keep internal component props
 strongly typed. Use `unknown` when the shape is not yet trusted.
 
+Use `ts-pattern`'s `isMatching` and `P` patterns for runtime validation of
+external JSON when the dependency is available. This validates the value and
+narrows its TypeScript type in the same branch.
+
+```ts
+import { isMatching, P } from "ts-pattern";
+
+const entryPattern = P.array({ id: P.number, title: P.string });
+
+if (!isMatching(entryPattern, data)) {
+	throw new Error("Archive data has an unexpected format.");
+}
+```
+
 ## Keep module boundaries intentional
 
 Import shared components and helpers from stable module paths. A barrel
@@ -66,7 +80,6 @@ but it is not required for every directory. Prefer direct imports for a small
 private component or when a barrel would obscure ownership or create a cycle.
 
 Do not copy backend-only patterns into the site automatically. Fastify route
-generics, Kysely database types, PostgreSQL `NULL` handling, and
-`ts-pattern` request validation belong at their respective integration
-boundaries. Add an equivalent site convention only when the site gains that
-kind of boundary.
+generics, Kysely database types, and PostgreSQL `NULL` handling belong at
+their respective integration boundaries. Add an equivalent site convention
+only when the site gains that kind of boundary.

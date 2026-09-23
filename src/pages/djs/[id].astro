@@ -1,0 +1,44 @@
+---
+import { readFile } from "node:fs/promises";
+import { isMatching, P } from "ts-pattern";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+type DJSummary = {
+  id: number;
+  title: string;
+};
+
+type Props = {
+  dj: DJSummary;
+};
+
+/** Generates static DJ detail pages from the archive summary during Astro builds. */
+export async function getStaticPaths() {
+  const djSummaryFile = new URL(
+    "../../../public/archive/djs_brief.json",
+    import.meta.url,
+  );
+  const source = await readFile(djSummaryFile, "utf8");
+  const data: unknown = JSON.parse(source);
+
+  if (!isMatching(P.array({ id: P.number, title: P.string }), data)) {
+    throw new Error("DJ summary data has an unexpected format.");
+  }
+
+  return data.map((dj) => ({
+    params: { id: String(dj.id) },
+    props: { dj },
+  }));
+}
+
+const { dj } = Astro.props as Props;
+---
+
+<BaseLayout
+  page="dj_page"
+  returning_page="djs"
+  title={`${dj.title} | Other Desert Radio`}
+>
+  <h1>{dj.title}</h1>
+  <p>DJ details coming soon.</p>
+</BaseLayout>

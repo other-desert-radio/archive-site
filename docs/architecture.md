@@ -39,7 +39,9 @@ The site still builds to static HTML; initial visits load a full document.
 
 The archive listings use `src/pages/index.astro` for SHOWS and
 `src/pages/djs.astro` for DJs. Both use `CategoryTabs.astro` to select the
-active category; the DJ page currently contains placeholder listing content.
+active category. `src/pages/djs/[id].astro` generates one static detail page
+per DJ in `public/archive/djs_brief.json`; it currently renders a minimal
+placeholder while the profile UI is built.
 
 For the current site, a browser requests `/`, Astro resolves that URL to `src/pages/index.astro`, and the build emits a static `dist/index.html`. `src/layouts/BaseLayout.astro` provides the document shell and imports `src/styles/global.css`, which registers Space Mono and applies the base font to the page. Files in `public/` are available at root-relative URLs, such as `/background.jpeg` and `/fonts/space-mono-regular.woff2`.
 
