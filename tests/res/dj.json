@@ -1,0 +1,11 @@
+{
+	"id": 1,
+	"title": "Test DJ One",
+	"image": "images/djs/1.jpg",
+	"bio": "<p>Test biography.</p>",
+	"socials": "<p>@testdjone</p>",
+	"showTitle": "Test Transmission",
+	"showDescription": "A test DJ show.",
+	"shows": [],
+	"tagIds": [1, 2]
+}

@@ -1,20 +1,25 @@
 ---
 import { pathToFileURL } from "node:url";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { fetchDJs, type DJ } from "../../utils/fetch-djs";
+import { fetchDJ, type HydratedDJ } from "../../utils/fetch-dj";
+import { fetchDJs } from "../../utils/fetch-djs";
 
 type Props = {
-	dj: DJ;
+	dj: HydratedDJ;
 };
 
 /** Generates static DJ detail pages from the archive summary during Astro builds. */
 export async function getStaticPaths() {
 	const djs = await fetchDJs(pathToFileURL("public/archive/djs_brief.json"));
 
-	return djs.map((dj) => ({
-    params: { id: String(dj.id) },
-    props: { dj },
-  }));
+	return Promise.all(
+		djs.map(async ({ id }) => ({
+			params: { id: String(id) },
+			props: {
+				dj: await fetchDJ(pathToFileURL(`public/archive/djs/${id}.json`)),
+			},
+		})),
+	);
 }
 
 const { dj } = Astro.props as Props;

@@ -15,9 +15,8 @@ const HydratedDJPattern = {
 
 export type HydratedDJ = P.infer<typeof HydratedDJPattern>;
 
-export const fetchDJ = async (id: number): Promise<HydratedDJ> => {
-	// TODO: see if file exists first
-	const source = await readFile(`public/archive/djs/${id}.json`, "utf8");
+export const fetchDJ = async (url: URL): Promise<HydratedDJ> => {
+	const source = await readFile(url, "utf8");
 	const data: unknown = JSON.parse(source);
 
 	if (!isMatching(HydratedDJPattern, data)) {
