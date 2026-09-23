@@ -9,8 +9,8 @@ const DJPattern = {
 
 export type DJ = P.infer<typeof DJPattern>;
 
-export async function fetchDJs(): Promise<DJ[]> {
-	const source = await readFile("public/archive/djs_brief.json", "utf8");
+export async function fetchDJs(url: URL): Promise<DJ[]> {
+	const source = await readFile(url, "utf8");
 	const data: unknown = JSON.parse(source);
 
 	if (!isMatching(P.array(DJPattern), data)) {

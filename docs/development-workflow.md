@@ -14,6 +14,7 @@ independently.
   changing existing behavior. If a behavior cannot be tested practically,
   explain why in the handoff.
 - Place headless tests in the top-level `tests/` directory.
+- Put reusable test fixtures in `tests/res/`.
 - Run the smallest relevant verification commands before handing off the
   chunk.
 - Stop after the chunk is complete so it can be reviewed before the next

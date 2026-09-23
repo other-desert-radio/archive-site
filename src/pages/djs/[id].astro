@@ -1,4 +1,5 @@
 ---
+import { pathToFileURL } from "node:url";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { fetchDJs, type DJ } from "../../utils/fetch-djs";
 
@@ -8,7 +9,7 @@ type Props = {
 
 /** Generates static DJ detail pages from the archive summary during Astro builds. */
 export async function getStaticPaths() {
-	const djs = await fetchDJs();
+	const djs = await fetchDJs(pathToFileURL("public/archive/djs_brief.json"));
 
 	return djs.map((dj) => ({
     params: { id: String(dj.id) },
