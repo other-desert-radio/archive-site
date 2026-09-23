@@ -1,5 +1,6 @@
 import type { DJ } from "../utils/fetch-djs";
 import type { TagMap } from "../utils/fetch-tags";
+import TagView from "./TagView";
 
 type Props = {
 	base: string;
@@ -11,16 +12,20 @@ const renderDJ = (base: string, dj: DJ, tags: TagMap) => {
 	return (
 		<li key={dj.id}>
 			<a href={`${base}/djs/${dj.id}`}>{dj.title}</a>
-			{dj.tagIds.map((id) => {
-				const tag = tags.get(id);
+			<div className="tag-container">
+				{dj.tagIds.map((id) => {
+					const tag = tags.get(id);
 
-				if (!tag) {
-					console.error(`Tag ${id} referenced by DJ ${dj.id} does not exist.`);
-					return undefined;
-				}
+					if (tag === undefined) {
+						console.error(
+							`Tag ${id} referenced by DJ ${dj.id} does not exist.`,
+						);
+						return null;
+					}
 
-				return <p key={tag.id}>{tag.title}</p>;
-			})}
+					return <TagView key={tag.id} tag={tag} />;
+				})}
+			</div>
 		</li>
 	);
 };
