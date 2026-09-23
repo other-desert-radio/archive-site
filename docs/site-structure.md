@@ -12,6 +12,11 @@ Ontop of every page there is a navigation bar that says "OTHER DESERT RADIO / ${
 
 ## Main page
 
+Detailed SHOWS design reference and future implementation guidance:
+[Shows archive UI guideline](shows-ui-guideline.md). This records the Figma
+screen, filter states, React component boundaries, and playback handoff;
+proposed behavior is distinguished from observed design details.
+
 
 on the main page, there are two navigation tabs (more may be added): SHOWS and DJs
 
