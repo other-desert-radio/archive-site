@@ -1,6 +1,12 @@
 ---
+import { pathToFileURL } from "node:url";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CategoryTabs from "../components/CategoryTabs.astro";
+import DJsPane from "../components/DJsPane.tsx";
+import { fetchDJs } from "../utils/fetch-djs";
+
+const djs = await fetchDJs(pathToFileURL("public/archive/djs_brief.json"));
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout
@@ -9,5 +15,5 @@ import CategoryTabs from "../components/CategoryTabs.astro";
   returning_page="home"
 >
   <CategoryTabs active="djs" />
-  <p>DJ search and list go here.</p>
+  <DJsPane base={base} djs={djs} />
 </BaseLayout>

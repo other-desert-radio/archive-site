@@ -15,6 +15,7 @@
 		"lint:eslint": "eslint .",
 		"lint:shell": "find .githooks scripts -type f -exec sh -n {} +",
 		"lint:types": "tsc --noEmit --project tsconfig.lint.json",
+		"test": "bun test",
 		"prepare": "./scripts/setup-hooks.sh",
 		"preview": "astro preview",
 		"astro": "astro"
@@ -25,7 +26,8 @@
 		"@types/react-dom": "^19.2.7",
 		"astro": "^7.3.1",
 		"react": "^19.2.8",
-		"react-dom": "^19.2.8"
+		"react-dom": "^19.2.8",
+		"ts-pattern": "^5.9.0"
 	},
 	"allowScripts": {
 		"esbuild": true
@@ -34,6 +36,7 @@
 		"@astrojs/check": "^0.9.10",
 		"@biomejs/biome": "^2.5.13",
 		"@eslint/js": "^10.0.1",
+		"@types/node": "^26.6.2",
 		"ajv": "^8.20.0",
 		"eslint": "^10.10.0",
 		"eslint-config-prettier": "^10.1.8",
