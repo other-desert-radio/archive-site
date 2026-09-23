@@ -14,3 +14,10 @@ test("loads the validated DJ archive summaries from a file URL", async () => {
 		],
 	);
 });
+
+test("rejects malformed DJ archive summaries", async () => {
+	await assert.rejects(
+		fetchDJs(pathToFileURL("tests/res/invalid-djs.json")),
+		/DJ summary data has an unexpected format/,
+	);
+});
