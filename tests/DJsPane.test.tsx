@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { renderToStaticMarkup } from "react-dom/server";
-import DJsPane from "../src/components/DJsPane";
+import DJsPane from "../src/components/dj/DJsPane";
 
 const djs = [
 	{ id: 11, title: "DJ AKĀSHA", image: "images/djs/11.jpg", tagIds: [1] },

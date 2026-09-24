@@ -1,0 +1,56 @@
+.dj-card {
+	display: flex;
+	flex-direction: row;
+	gap: 1.5rem;
+	min-width: 0;
+	color: inherit;
+	text-decoration: none;
+}
+
+.placeholder-image {
+	align-self: flex-start;
+
+	flex: 0 0 200px;
+	width: 200px;
+	aspect-ratio: 1;
+	background-color: #bebebe;
+	border: 3px solid black;
+}
+
+.trailing-content {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	overflow-wrap: anywhere;
+}
+
+.trailing-content :global(.tag) {
+	max-width: 100%;
+}
+
+.dj-title {
+	font-size: 3rem;
+	margin: 0;
+	font-weight: normal;
+}
+
+@media (max-width: 750px) {
+	.dj-card {
+		gap: 1rem;
+	}
+
+	.dj-title {
+		font-size: 2rem;
+	}
+
+	.placeholder-image {
+		flex-basis: 8rem;
+		width: 8rem;
+	}
+}
+
+@media (max-width: 400px) {
+	.dj-title {
+		font-size: 1.5rem;
+	}
+}

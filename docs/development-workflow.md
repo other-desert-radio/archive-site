@@ -52,3 +52,10 @@ changes materially.
 Use the existing repository scripts rather than introducing one-off local
 commands. Keep the verification result with the handoff so the next review
 starts from a known state.
+
+For DJ card CSS changes, also check `/archive-site/djs` in responsive mode
+at 320px, 332px, 750px, and desktop widths. Names and tags must wrap within
+their cards without horizontal overflow or changing the page scale when
+switching from SHOWS to DJs. The mobile cards use smaller titles and gaps;
+long unbroken names and tags must remain contained. This requires a browser
+check because the current server-rendered unit tests do not compute layout.
