@@ -12,20 +12,20 @@ type Props = {
 
 /** Generates static DJ detail pages from the archive summary during Astro builds. */
 export async function getStaticPaths() {
-  const djs = await fetchDJs(pathToFileURL("public/archive/djs_brief.json"));
+  const djs = await fetchDJs(pathToFileURL("src/res/djs_brief.json"));
 
   return Promise.all(
     djs.map(async ({ id }) => ({
       params: { id: String(id) },
       props: {
-        dj: await fetchDJ(pathToFileURL(`public/archive/djs/${id}.json`)),
+        dj: await fetchDJ(pathToFileURL(`src/res/djs/${id}.json`)),
       },
     })),
   );
 }
 
 const { dj } = Astro.props as Props;
-const tags = await fetchTags(pathToFileURL("public/archive/tags.json"));
+const tags = await fetchTags(pathToFileURL("src/res/tags.json"));
 
 const hydratedTags = dj.tagIds.flatMap((id) => {
   const tag = tags.get(id);
