@@ -26,13 +26,14 @@ const renderTagContainer = (tagIds: number[], tags: TagMap) => {
 	);
 };
 
+//<a href={`${base}/djs/${dj.id}`}>{dj.title}</a>
 export default function DJCard({ dj, base, tags }: Props) {
 	return (
 		<div key={dj.id} className={styles["dj-card"]}>
 			<div className={styles["placeholder-image"]} />
 
 			<div className={styles["trailing-content"]}>
-				<a href={`${base}/djs/${dj.id}`}>{dj.title}</a>
+				<h2 className={styles["dj-title"]}>{dj.title}</h2>
 				{renderTagContainer(dj.tagIds, tags)}
 			</div>
 		</div>

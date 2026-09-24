@@ -28,7 +28,9 @@ textarea {
 }
 
 .tag {
-	padding: 0px 5px;
+	padding: 0px 7px;
+	font-size: 0.85rem;
+	border: 2px solid black;
 }
 
 .tag-container {
