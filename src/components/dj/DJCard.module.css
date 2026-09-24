@@ -19,6 +19,11 @@
 	display: flex;
 	flex-direction: column;
 	min-width: 0;
+	overflow-wrap: anywhere;
+}
+
+.trailing-content :global(.tag) {
+	max-width: 100%;
 }
 
 .dj-title {
@@ -28,8 +33,22 @@
 }
 
 @media (max-width: 750px) {
+	.dj-card {
+		gap: 1rem;
+	}
+
+	.dj-title {
+		font-size: 2rem;
+	}
+
 	.placeholder-image {
 		flex-basis: 8rem;
 		width: 8rem;
+	}
+}
+
+@media (max-width: 400px) {
+	.dj-title {
+		font-size: 1.5rem;
 	}
 }
