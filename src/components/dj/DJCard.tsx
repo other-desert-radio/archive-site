@@ -9,14 +9,14 @@ type Props = {
 	tags: TagMap;
 };
 
-const renderTagContainer = (tagIds: number[], tags: TagMap) => {
+const renderTagContainer = (tagIds: number[], tags: TagMap, djId: number) => {
 	return (
 		<div className="tag-container">
 			{tagIds.map((id) => {
 				const tag = tags.get(id);
 
 				if (tag === undefined) {
-					console.error(`Tag ${id} does not exist.`);
+					console.error(`Tag ${id} referenced by DJ ${djId} does not exist.`);
 					return null;
 				}
 
@@ -26,16 +26,15 @@ const renderTagContainer = (tagIds: number[], tags: TagMap) => {
 	);
 };
 
-//<a href={`${base}/djs/${dj.id}`}>{dj.title}</a>
 export default function DJCard({ dj, base, tags }: Props) {
 	return (
-		<div key={dj.id} className={styles["dj-card"]}>
+		<a href={`${base}/djs/${dj.id}`} className={styles["dj-card"]}>
 			<div className={styles["placeholder-image"]} />
 
 			<div className={styles["trailing-content"]}>
 				<h2 className={styles["dj-title"]}>{dj.title}</h2>
-				{renderTagContainer(dj.tagIds, tags)}
+				{renderTagContainer(dj.tagIds, tags, dj.id)}
 			</div>
-		</div>
+		</a>
 	);
 }
