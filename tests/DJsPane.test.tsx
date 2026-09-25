@@ -41,7 +41,7 @@ test("logs an error and skips a missing tag", () => {
 		);
 
 		assert.doesNotMatch(markup, />Ambient</);
-		assert.deepEqual(errors, ["Tag 1 referenced by DJ 11 does not exist."]);
+		assert.deepEqual(errors, ["Tag 1 does not exist."]);
 	} finally {
 		console.error = originalError;
 	}
