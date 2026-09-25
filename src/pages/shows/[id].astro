@@ -1,0 +1,39 @@
+---
+import { pathToFileURL } from "node:url";
+import { fetchShows, type Show } from "../../utils/fetch-shows";
+import { fetchTags } from "../../utils/fetch-tags";
+import { hydrateTags } from "../../utils/hydrate-tags";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TagView from "../../components/TagView.astro";
+
+type Props = {
+  show: Show;
+};
+export async function getStaticPaths() {
+  const shows = await fetchShows(pathToFileURL("src/res/shows.json"));
+
+  return Promise.all(
+    shows.map(async (show) => ({
+      params: { id: String(show.id) },
+      props: {
+        show: show,
+      },
+    })),
+  );
+}
+
+const { show } = Astro.props as Props;
+const tags = await fetchTags(pathToFileURL("src/res/tags.json"));
+const hydratedTags = hydrateTags(show, tags);
+---
+
+<BaseLayout
+  page="show_page"
+  returning_page="shows"
+  title={`${show.title} | Other Desert Radio`}
+>
+  <h1>{show.title}</h1>
+  <div>
+    {hydratedTags.map((tag) => <TagView tag={tag} />)}
+  </div>
+</BaseLayout>

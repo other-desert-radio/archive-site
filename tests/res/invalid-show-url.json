@@ -1,0 +1,12 @@
+[
+	{
+		"id": 1,
+		"title": "Invalid URL",
+		"date": "2026-05-25",
+		"duration": 3600,
+		"image": "images/shows/1.jpg",
+		"djs": [],
+		"tagIds": [],
+		"url": "ftp://example.com/show"
+	}
+]

@@ -1,0 +1,12 @@
+[
+	{
+		"id": 1,
+		"title": "Invalid Image",
+		"date": "2026-05-25",
+		"duration": 3600,
+		"image": "image with spaces.jpg",
+		"djs": [],
+		"tagIds": [],
+		"url": "https://www.mixcloud.com/example/show/"
+	}
+]

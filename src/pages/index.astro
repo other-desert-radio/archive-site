@@ -1,10 +1,18 @@
 ---
+import { pathToFileURL } from "node:url";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CategoryTabs from "../components/CategoryTabs.astro";
+import ShowsPane from "../components/shows/ShowsPane";
+import { fetchShows } from "../utils/fetch-shows";
+import { fetchTags } from "../utils/fetch-tags";
+
+const tags = await fetchTags(pathToFileURL("src/res/tags.json"));
+const shows = await fetchShows(pathToFileURL("src/res/shows.json"));
+const base = import.meta.env.BASE_URL;
 ---
 
 <!-- This is the shows page -->
-<BaseLayout title="Archive Site" page="archive" returning_page="home">
+<BaseLayout title="Archive Site" page="shows" returning_page="home">
   <CategoryTabs active="shows" />
-  <p>Shows go here</p>
+  <ShowsPane base={base} shows={shows} tags={tags} />
 </BaseLayout>

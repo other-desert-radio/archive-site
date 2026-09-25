@@ -118,5 +118,20 @@
 		"id": 24,
 		"title": "africa",
 		"color": "#9135fb"
+	},
+	{
+		"id": 25,
+		"title": "Ambient",
+		"color": "#610390"
+	},
+	{
+		"id": 26,
+		"title": "lounge",
+		"color": "#9886cd"
+	},
+	{
+		"id": 27,
+		"title": "trip",
+		"color": "#e12885"
 	}
 ]

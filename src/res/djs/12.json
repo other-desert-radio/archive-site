@@ -8,6 +8,24 @@
 	"showDescription": "60-minute themed episode, usually based on a specific global region and sounds therein",
 	"shows": [
 		{
+			"id": 2,
+			"title": "Freedom Overspill Episode Eight, Terry Riley + Don Cherry, Unreleased",
+			"date": "2021-03-08T00:00:00.000Z",
+			"duration": 12722,
+			"image": "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/e/2/4/2/6470-ce13-4ca4-8bc6-2f0ee48b71d3",
+			"tagIds": [25],
+			"url": "https://www.mixcloud.com/otherdesertradio/derek-monypeny-freedom-overspill-episode-vii-heavy-japan-february-15-2021/"
+		},
+		{
+			"id": 3,
+			"title": "Freedom Overspill Episode One",
+			"date": "2020-08-03T00:00:00.000Z",
+			"duration": 3722,
+			"image": "https://thumbnailer.mixcloud.com/unsafe/300x300/profile/d/d/c/7/1673-4d90-448d-a5e8-9ea9903c68d4",
+			"tagIds": [],
+			"url": "https://www.mixcloud.com/otherdesertradio/derek-freedom-overspill-episode-one-august-3-2020/"
+		},
+		{
 			"id": 1,
 			"title": "Mauritania Mix",
 			"date": "2020-04-13T00:00:00.000Z",
@@ -17,5 +35,5 @@
 			"url": "https://www.mixcloud.com/otherdesertradio/derek-monypeny-mauritania-mix/"
 		}
 	],
-	"tagIds": [8, 9, 10, 23, 24]
+	"tagIds": [8, 9, 10, 23, 24, 25]
 }

@@ -15,7 +15,7 @@
 		"id": 12,
 		"title": "Derek Monypeny",
 		"image": "assets/djs/12.jpg",
-		"tagIds": [8, 9, 10, 23, 24]
+		"tagIds": [8, 9, 10, 23, 24, 25]
 	},
 	{
 		"id": 13,
@@ -27,7 +27,7 @@
 		"id": 14,
 		"title": "muzizmu",
 		"image": "assets/djs/14.jpg",
-		"tagIds": [14, 15, 16, 17, 18]
+		"tagIds": [4, 14, 15, 16, 17, 18, 21, 26, 27]
 	},
 	{
 		"id": 15,
