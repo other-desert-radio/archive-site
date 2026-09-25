@@ -18,12 +18,14 @@ export const formatDate = (date: string): string =>
 	}).format(new Date(date));
 
 export default function ShowCard({ show, base, tags }: Props) {
+	const detailBase = base.replace(/\/$/, "");
+
 	return (
 		<article className={styles["show-card"]}>
 			<div className={styles["placeholder-widget"]} />
 			<div className={styles["trailing-content"]}>
 				<a
-					href={`${base}/shows/${show.id}`}
+					href={`${detailBase}/shows/${show.id}`}
 					className={styles["show-title"]}
 					aria-label={`View ${show.title}`}
 				>
@@ -36,7 +38,7 @@ export default function ShowCard({ show, base, tags }: Props) {
 				{show.djs.map((dj) => (
 					<a
 						key={dj.id}
-						href={`${base}/djs/${dj.id}`}
+						href={`${detailBase}/djs/${dj.id}`}
 						className={styles["dj-container"]}
 						aria-label={`View ${dj.title}`}
 					>
