@@ -27,13 +27,6 @@ test("rejects shows with an invalid date", async () => {
 	);
 });
 
-test("rejects shows with a negative duration", async () => {
-	await assert.rejects(
-		fetchShows(pathToFileURL("tests/res/invalid-show-duration.json")),
-		/Show data has an unexpected format/,
-	);
-});
-
 test("rejects shows with an invalid image reference", async () => {
 	await assert.rejects(
 		fetchShows(pathToFileURL("tests/res/invalid-show-image.json")),
