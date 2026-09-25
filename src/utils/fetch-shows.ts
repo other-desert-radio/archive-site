@@ -1,29 +1,35 @@
 import { readFile } from "node:fs/promises";
 import { isMatching, P } from "ts-pattern";
+import {
+	AssetReferencePattern,
+	HttpUrlPattern,
+	IsoDatePattern,
+} from "./patterns";
 
 const ShowPattern = {
 	id: P.number,
 	title: P.string,
-	date: P.string, // TODO: regex
+	date: IsoDatePattern,
 	duration: P.number,
-	image: P.string, // TODO: regex
+	image: AssetReferencePattern,
 	djs: P.array({
 		id: P.number,
 		title: P.string,
 		image: P.string,
 	}),
 	tagIds: P.array(P.number),
-	url: P.string, // TODO: URL regex
+	url: HttpUrlPattern,
 };
 
 export type Show = P.infer<typeof ShowPattern>;
 
-// TODO: write tests
+const isValidShow = (show: Show): boolean => show.duration >= 0;
+
 export const fetchShows = async (url: URL): Promise<Show[]> => {
 	const source = await readFile(url, "utf8");
 	const data: unknown = JSON.parse(source);
 
-	if (!isMatching(P.array(ShowPattern), data)) {
+	if (!isMatching(P.array(ShowPattern), data) || !data.every(isValidShow)) {
 		throw new Error("Show data has an unexpected format.");
 	}
 

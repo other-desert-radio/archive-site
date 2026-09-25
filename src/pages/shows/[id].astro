@@ -1,7 +1,7 @@
 ---
 import { pathToFileURL } from "node:url";
 import { fetchShows, type Show } from "../../utils/fetch-shows";
-import { fetchTags } from "../../utils/fetch-tags";
+//import { fetchTags } from "../../utils/fetch-tags";
 
 type Props = {
   show: Show;
@@ -19,11 +19,12 @@ export async function getStaticPaths() {
   );
 }
 
-const { show } = Astro.props as Props;
-const tags = await fetchTags(pathToFileURL("src/res/tags.json"));
+//const { show } = Astro.props as Props;
+//const tags = await fetchTags(pathToFileURL("src/res/tags.json"));
 
 // TODO: remove export
-export const hydratedTags = show.tagIds.flatMap((id) => {
+/*
+const hydratedTags = show.tagIds.flatMap((id) => {
   const tag = tags.get(id);
 
   if (tag === undefined) {
@@ -33,6 +34,7 @@ export const hydratedTags = show.tagIds.flatMap((id) => {
 
   return [tag];
 });
+*/
 ---
 
 <div>WIP</div>

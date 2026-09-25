@@ -14,7 +14,7 @@ export default function ShowsPane({ shows }: Props) {
 	return (
 		<div>
 			{shows.map((show) => (
-				<div>{show.title}</div>
+				<div key={show.id}>{show.title}</div>
 			))}
 		</div>
 	);

@@ -1,0 +1,12 @@
+[
+	{
+		"id": 1,
+		"title": "Invalid Duration",
+		"date": "2026-05-25",
+		"duration": -1,
+		"image": "images/shows/1.jpg",
+		"djs": [],
+		"tagIds": [],
+		"url": "https://www.mixcloud.com/example/show/"
+	}
+]
