@@ -10,14 +10,16 @@ type Props = {
 };
 
 export default function ShowsPane({ base, shows, tags }: Props) {
+	const detailBase = base.replace(/\/$/, "");
+
 	if (shows.length === 0) {
 		return <p>No shows found.</p>;
 	}
 
 	return (
-		<div className={styles["shows-pane"]}>
+		<div className={styles["show-container-grid"]}>
 			{shows.map((show) => (
-				<ShowCard key={show.id} show={show} base={base} tags={tags} />
+				<ShowCard key={show.id} show={show} base={detailBase} tags={tags} />
 			))}
 		</div>
 	);

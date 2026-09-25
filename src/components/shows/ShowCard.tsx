@@ -9,6 +9,11 @@ type Props = {
 	tags: TagMap;
 };
 
+/**
+ * Formats a show timestamp for display in the archive.
+ *
+ *   ISO timestamp --> "Month day, year"
+ */
 export const formatDate = (date: string): string =>
 	new Intl.DateTimeFormat("en-US", {
 		day: "numeric",
@@ -17,6 +22,27 @@ export const formatDate = (date: string): string =>
 		year: "numeric",
 	}).format(new Date(date));
 
+/**
+ * Renders the compact DJ links associated with a show.
+ */
+const renderDJs = (djs: Show["djs"], base: string) =>
+	djs.map((dj) => (
+		<a
+			key={dj.id}
+			href={`${base}/djs/${dj.id}`}
+			className={styles["dj-container"]}
+			aria-label={`View ${dj.title}`}
+		>
+			<div
+				className={`${styles["placeholder-dj-image"]} image-border-primary`}
+			/>
+			<span className={styles["dj-name-title"]}>{dj.title}</span>
+		</a>
+	));
+
+/**
+ * Renders one archive show with its date, tags, and associated DJs.
+ */
 export default function ShowCard({ show, base, tags }: Props) {
 	const detailBase = base.replace(/\/$/, "");
 
@@ -35,19 +61,7 @@ export default function ShowCard({ show, base, tags }: Props) {
 					{formatDate(show.date)}
 				</time>
 				<TagContainer tagIds={show.tagIds} tags={tags} />
-				{show.djs.map((dj) => (
-					<a
-						key={dj.id}
-						href={`${detailBase}/djs/${dj.id}`}
-						className={styles["dj-container"]}
-						aria-label={`View ${dj.title}`}
-					>
-						<div
-							className={`${styles["placeholder-dj-image"]} image-border-primary`}
-						/>
-						<span className={styles["dj-name-title"]}>{dj.title}</span>
-					</a>
-				))}
+				{renderDJs(show.djs, detailBase)}
 			</div>
 		</article>
 	);
