@@ -12,7 +12,11 @@ const base = import.meta.env.BASE_URL;
 ---
 
 <!-- This is the shows page -->
-<BaseLayout title="Archive Site" page="shows" returning_page="home">
+<BaseLayout
+  title="Archive | Other Desert Radio"
+  page="shows"
+  returning_page="home"
+>
   <CategoryTabs active="shows" />
   <ShowsPane base={base} shows={shows} tags={tags} />
 </BaseLayout>
