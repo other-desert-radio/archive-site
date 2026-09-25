@@ -1,0 +1,38 @@
+---
+import { pathToFileURL } from "node:url";
+import { fetchShows, type Show } from "../../utils/fetch-shows";
+import { fetchTags } from "../../utils/fetch-tags";
+
+type Props = {
+  show: Show;
+};
+export async function getStaticPaths() {
+  const shows = await fetchShows(pathToFileURL("src/res/shows.json"));
+
+  return Promise.all(
+    shows.map(async (show) => ({
+      params: { id: String(show.id) },
+      props: {
+        show: show,
+      },
+    })),
+  );
+}
+
+const { show } = Astro.props as Props;
+const tags = await fetchTags(pathToFileURL("src/res/tags.json"));
+
+// TODO: remove export
+export const hydratedTags = show.tagIds.flatMap((id) => {
+  const tag = tags.get(id);
+
+  if (tag === undefined) {
+    console.error(`Tag ${id} referenced by Show ${show.id} does not exist.`);
+    return [];
+  }
+
+  return [tag];
+});
+---
+
+<div>WIP</div>
