@@ -108,5 +108,15 @@
 		"id": 22,
 		"title": "pop",
 		"color": "#7071d9"
+	},
+	{
+		"id": 23,
+		"title": "mauritania",
+		"color": "#a9ebf6"
+	},
+	{
+		"id": 24,
+		"title": "africa",
+		"color": "#9135fb"
 	}
 ]

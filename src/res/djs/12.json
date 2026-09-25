@@ -6,6 +6,16 @@
 	"socials": "<p>instagram.com/derek_monypeny</p>",
 	"showTitle": "Freedom Overspill Radio Hour",
 	"showDescription": "60-minute themed episode, usually based on a specific global region and sounds therein",
-	"shows": [],
-	"tagIds": [8, 9, 10]
+	"shows": [
+		{
+			"id": 1,
+			"title": "Mauritania Mix",
+			"date": "2020-04-13T00:00:00.000Z",
+			"duration": 3541,
+			"image": "https://thumbnailer.mixcloud.com/unsafe/300x300/profile/d/d/c/7/1673-4d90-448d-a5e8-9ea9903c68d4",
+			"tagIds": [23, 24],
+			"url": "https://www.mixcloud.com/otherdesertradio/derek-monypeny-mauritania-mix/"
+		}
+	],
+	"tagIds": [8, 9, 10, 23, 24]
 }
