@@ -83,3 +83,15 @@ Do not copy backend-only patterns into the site automatically. Fastify route
 generics, Kysely database types, and PostgreSQL `NULL` handling belong at
 their respective integration boundaries. Add an equivalent site convention
 only when the site gains that kind of boundary.
+
+## Label interactive components
+
+Always include an `aria-label` when building an interactive component, such as
+a link, button, input, or custom control. Make the label describe the action
+or destination, rather than relying on visual context alone.
+
+```tsx
+<a href={detailUrl} aria-label={`View ${title}`}>
+	{title}
+</a>
+```

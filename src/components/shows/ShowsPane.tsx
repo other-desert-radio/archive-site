@@ -1,12 +1,14 @@
 import type { Show } from "../../utils/fetch-shows";
 import type { TagMap } from "../../utils/fetch-tags";
+import ShowCard from "./ShowCard";
 
 type Props = {
 	shows: Show[];
 	tags: TagMap;
+	base: string;
 };
 
-export default function ShowsPane({ shows }: Props) {
+export default function ShowsPane({ base, shows }: Props) {
 	if (shows.length === 0) {
 		return <p>No shows found.</p>;
 	}
@@ -14,7 +16,7 @@ export default function ShowsPane({ shows }: Props) {
 	return (
 		<div>
 			{shows.map((show) => (
-				<div key={show.id}>{show.title}</div>
+				<ShowCard key={show.id} show={show} base={base} />
 			))}
 		</div>
 	);

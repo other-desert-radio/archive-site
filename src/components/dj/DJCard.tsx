@@ -11,7 +11,11 @@ type Props = {
 
 export default function DJCard({ dj, base, tags }: Props) {
 	return (
-		<a href={`${base}/djs/${dj.id}`} className={styles["dj-card"]}>
+		<a
+			href={`${base}/djs/${dj.id}`}
+			className={styles["dj-card"]}
+			aria-label={`View ${dj.title}`}
+		>
 			<div className={styles["placeholder-image"]} />
 
 			<div className={styles["trailing-content"]}>
