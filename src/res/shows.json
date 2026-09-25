@@ -1,0 +1,18 @@
+[
+	{
+		"id": 1,
+		"title": "Mauritania Mix",
+		"date": "2020-04-13T00:00:00.000Z",
+		"duration": 3541,
+		"image": "https://thumbnailer.mixcloud.com/unsafe/300x300/profile/d/d/c/7/1673-4d90-448d-a5e8-9ea9903c68d4",
+		"djs": [
+			{
+				"id": 12,
+				"title": "Derek Monypeny",
+				"image": "assets/djs/12.jpg"
+			}
+		],
+		"tagIds": [23, 24],
+		"url": "https://www.mixcloud.com/otherdesertradio/derek-monypeny-mauritania-mix/"
+	}
+]

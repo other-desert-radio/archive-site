@@ -1,10 +1,19 @@
 .djs-container-grid {
 	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
+	width: 100%;
+	max-width: 120rem;
+	margin-inline: auto;
+	grid-template-columns: repeat(2, minmax(28rem, 1fr));
 	gap: 3rem 4rem;
 }
 
-@media (max-width: 900px) {
+@media (min-width: 1800px) {
+	.djs-container-grid {
+		grid-template-columns: repeat(3, minmax(28rem, 1fr));
+	}
+}
+
+@media (max-width: 1023px) {
 	.djs-container-grid {
 		grid-template-columns: minmax(0, 1fr);
 	}
