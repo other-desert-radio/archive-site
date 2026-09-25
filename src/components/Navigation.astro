@@ -6,12 +6,30 @@ type Props = {
 
 const { page, returning_page } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
-const returnHref =
-  returning_page === "home"
-    ? "https://otherdesertradio.com"
-    : returning_page === "djs"
-      ? `${base}/djs`
-      : `${base}/`; // TODO: collapse this
+const returnHref = (() => {
+  switch (returning_page) {
+    case "shows": {
+      return `${base}/`;
+    }
+    case "djs":
+      return `${base}/djs`;
+    case "home":
+      return "https://otherdesertradio.com";
+  }
+})();
+
+const title = (() => {
+  switch (page) {
+    case "shows":
+    case "djs": {
+      return "archive";
+    }
+    case "dj_page":
+    case "show_page": {
+      return page;
+    }
+  }
+})();
 ---
 
 <nav aria-label="Navigation title">
@@ -24,7 +42,7 @@ const returnHref =
     <b>{returning_page.toUpperCase()}</b>
   </a>
 
-  <span>OTHER DESERT RADIO / {page.toUpperCase()}</span>
+  <span>OTHER DESERT RADIO / {title.toUpperCase()}</span>
 </nav>
 
 <style>

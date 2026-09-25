@@ -1,10 +1,11 @@
 ---
-import { pathToFileURL } from "node:url";
-import { fetchShows, type Show } from "../../utils/fetch-shows";
-import { fetchTags } from "../../utils/fetch-tags";
-import { hydrateTags } from "../../utils/hydrate-tags";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import TagView from "../../components/TagView.astro";
+import { fetchShows, type Show } from "../../utils/fetch-shows";
+import { fetchTags } from "../../utils/fetch-tags";
+import { formatDate } from "../../utils/format-date";
+import { hydrateTags } from "../../utils/hydrate-tags";
+import { pathToFileURL } from "node:url";
 
 type Props = {
   show: Show;
@@ -32,8 +33,72 @@ const hydratedTags = hydrateTags(show, tags);
   returning_page="shows"
   title={`${show.title} | Other Desert Radio`}
 >
-  <h1>{show.title}</h1>
-  <div>
-    {hydratedTags.map((tag) => <TagView tag={tag} />)}
+  <div class="container">
+    <div class="header-container">
+      <h1 class="page-title">{show.title}</h1>
+      <p>{formatDate(show.date)}</p>
+    </div>
+    <div class="leading-container">
+      <div class="photo-placeholder"></div>
+      <div class="tag-container">
+        {hydratedTags.map((tag) => <TagView tag={tag} />)}
+      </div>
+    </div>
+    <div class="trailing-container">
+      <p>maybe tracklist goes here</p>
+    </div>
   </div>
 </BaseLayout>
+
+<style>
+  .container {
+    display: grid;
+    grid-template-columns: minmax(min(300px, 100%), 300px) minmax(0, 1fr);
+    column-gap: 2rem;
+    row-gap: 1rem;
+  }
+
+  .header-container {
+    grid-column: 1 / -1;
+  }
+  .page-title {
+    margin-bottom: 0px;
+  }
+
+  /* set:html paragraphs do not receive Astro's scoped style attribute. */
+  .container :global(p) {
+    margin: 0 !important;
+  }
+
+  .photo-placeholder {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1;
+    background-color: #bebebe;
+    border: 6px solid black;
+  }
+
+  .leading-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .trailing-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  @media (max-width: 750px) {
+    .container {
+      column-gap: 1rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
