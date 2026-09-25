@@ -22,7 +22,7 @@ export default function ShowCard({ show, base, tags }: Props) {
 
 	return (
 		<article className={styles["show-card"]}>
-			<div className={styles["placeholder-widget"]} />
+			<div className={`${styles["placeholder-widget"]} image-border-primary`} />
 			<div className={styles["trailing-content"]}>
 				<a
 					href={`${detailBase}/shows/${show.id}`}
@@ -42,7 +42,9 @@ export default function ShowCard({ show, base, tags }: Props) {
 						className={styles["dj-container"]}
 						aria-label={`View ${dj.title}`}
 					>
-						<div className={styles["placeholder-dj-image"]} />
+						<div
+							className={`${styles["placeholder-dj-image"]} image-border-primary`}
+						/>
 						<span className={styles["dj-name-title"]}>{dj.title}</span>
 					</a>
 				))}
