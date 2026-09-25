@@ -3,13 +3,13 @@ import { ClientRouter } from "astro:transitions";
 
 type Props = {
   title: string;
-  page: "archive" | "dj_page";
-  returning_page: "archive" | "djs" | "home";
+  page: "shows" | "djs" | "dj_page" | "show_page";
+  returning_page: "shows" | "djs" | "home";
 };
 
 const {
   title = "Archive Site",
-  page = "archive",
+  page = "shows",
   returning_page = "home",
 } = Astro.props;
 import "../styles/global.css";

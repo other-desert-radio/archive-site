@@ -5,6 +5,7 @@ import TagView from "../../components/TagView.astro";
 import { fetchDJ, type HydratedDJ } from "../../utils/fetch-dj";
 import { fetchDJs } from "../../utils/fetch-djs";
 import { fetchTags } from "../../utils/fetch-tags";
+import { hydrateTags } from "../../utils/hydrate-tags";
 
 type Props = {
   dj: HydratedDJ;
@@ -27,16 +28,7 @@ export async function getStaticPaths() {
 const { dj } = Astro.props as Props;
 const tags = await fetchTags(pathToFileURL("src/res/tags.json"));
 
-const hydratedTags = dj.tagIds.flatMap((id) => {
-  const tag = tags.get(id);
-
-  if (tag === undefined) {
-    console.error(`Tag ${id} referenced by DJ ${dj.id} does not exist.`);
-    return [];
-  }
-
-  return [tag];
-});
+const hydratedTags = hydrateTags(dj, tags);
 ---
 
 <BaseLayout
