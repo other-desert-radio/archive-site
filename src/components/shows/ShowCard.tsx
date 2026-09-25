@@ -9,6 +9,14 @@ type Props = {
 	tags: TagMap;
 };
 
+export const formatDate = (date: string): string =>
+	new Intl.DateTimeFormat("en-US", {
+		day: "numeric",
+		month: "long",
+		timeZone: "UTC",
+		year: "numeric",
+	}).format(new Date(date));
+
 export default function ShowCard({ show, base, tags }: Props) {
 	return (
 		<article className={styles["show-card"]}>
@@ -21,17 +29,19 @@ export default function ShowCard({ show, base, tags }: Props) {
 				>
 					{show.title}
 				</a>
-				<div className={styles["tag-date-container"]}>
-					<TagContainer tagIds={show.tagIds} tags={tags} />
-					<span className={styles["show-date"]}>{show.date}</span>
-				</div>
+				<time className={styles["show-date"]} dateTime={show.date}>
+					{formatDate(show.date)}
+				</time>
+				<TagContainer tagIds={show.tagIds} tags={tags} />
 				{show.djs.map((dj) => (
 					<a
 						key={dj.id}
 						href={`${base}/djs/${dj.id}`}
+						className={styles["dj-container"]}
 						aria-label={`View ${dj.title}`}
 					>
-						{dj.title}
+						<div className={styles["placeholder-dj-image"]} />
+						<span className={styles["dj-name-title"]}>{dj.title}</span>
 					</a>
 				))}
 			</div>
