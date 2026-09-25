@@ -20,8 +20,8 @@
 .placeholder-widget {
 	align-self: flex-start;
 
-	flex: 0 0 300px;
-	width: 300px;
+	flex: 0 0 245px;
+	width: 235px;
 	aspect-ratio: 1;
 	background-color: #bebebe;
 }
