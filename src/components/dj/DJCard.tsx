@@ -24,7 +24,7 @@ export default function DJCard({ dj, base, tags }: Props) {
 
 			<div className={styles["trailing-content"]}>
 				<h2 className={styles["dj-title"]}>{dj.title}</h2>
-				<TagContainer tagIds={dj.tagIds} tags={tags} />
+				<TagContainer tagIds={dj.tagIds} tags={tags} size="normal" />
 			</div>
 		</a>
 	);

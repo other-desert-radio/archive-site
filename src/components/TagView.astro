@@ -3,11 +3,12 @@ import type { Tag } from "../utils/fetch-tags";
 
 type Props = {
   tag: Tag;
+  size: "normal" | "large";
 };
 
-const { tag } = Astro.props as Props;
+const { tag, size } = Astro.props as Props;
 ---
 
-<div class="tag" style={`background-color: ${tag.color}`}>
+<div class:list={["tag", { "tag-large": size === "large" }]} style={`background-color: ${tag.color}`}>
   {tag.title}
 </div>

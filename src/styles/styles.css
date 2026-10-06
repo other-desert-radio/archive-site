@@ -34,6 +34,10 @@ textarea {
 	border: 2px solid black;
 }
 
+.tag-large {
+	font-size: 1.2rem;
+}
+
 .tag-container {
 	display: flex;
 	flex-direction: row;

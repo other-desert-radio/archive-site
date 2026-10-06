@@ -8,7 +8,7 @@ test("formats a show date in UTC", () => {
 	assert.equal(formatDate("2026-05-25T00:00:00.000Z"), "May 25, 2026");
 });
 
-test("renders normalized show and DJ detail links", () => {
+test("renders normalized detail links, large show artwork, and small DJ artwork", () => {
 	const markup = renderToStaticMarkup(
 		<ShowCard
 			base="/archive-site/"
@@ -38,12 +38,12 @@ test("renders normalized show and DJ detail links", () => {
 	assert.match(markup, /href="\/archive-site\/djs\/2"/);
 	assert.match(
 		markup,
-		/<img[^>]+src="https:\/\/cdn.example.com\/show-small.jpg"[^>]+alt="Test Show"/,
+		/<img[^>]+src="images\/shows\/1_large.jpg"[^>]+alt="Test Show"/,
 	);
 	assert.match(
 		markup,
 		/<img[^>]+src="\/archive-site\/images\/djs\/2.jpg"[^>]+alt="Test DJ"/,
 	);
-	assert.doesNotMatch(markup, /_large/);
+	assert.doesNotMatch(markup, /show-small\.jpg|2_large\.jpg/);
 	assert.doesNotMatch(markup, /\/archive-site\/\//);
 });

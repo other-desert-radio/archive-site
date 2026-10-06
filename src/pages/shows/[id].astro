@@ -41,7 +41,7 @@ const hydratedTags = hydrateTags(show, tags);
     <div class="leading-container">
       <img class="photo" src={show.image_large} alt={show.title} />
       <div class="tag-container">
-        {hydratedTags.map((tag) => <TagView tag={tag} />)}
+        {hydratedTags.map((tag) => <TagView tag={tag} size="large" />)}
       </div>
     </div>
     <div class="trailing-container">
@@ -63,8 +63,6 @@ const hydratedTags = hydrateTags(show, tags);
   }
   .page-title {
     margin-bottom: 0px;
-    font-weight: normal;
-    font-size: 2.5rem;
   }
 
   /* set:html paragraphs do not receive Astro's scoped style attribute. */
