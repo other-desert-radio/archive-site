@@ -18,7 +18,7 @@ export default function DJCard({ dj, base, tags }: Props) {
 		>
 			<img
 				className={`${styles["image"]} image-border-primary`}
-				src={`${base.replace(/\/$/, "")}/${dj.image_small}`}
+				src={`${base}/${dj.image_small}`}
 				alt={dj.title}
 			/>
 

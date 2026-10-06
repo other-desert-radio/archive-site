@@ -12,12 +12,15 @@
 	color: inherit;
 	text-decoration: none;
 }
+.show-title:hover {
+	text-decoration: underline;
+}
 
 .show-date {
 	font-weight: normal;
 }
 
-.placeholder-widget {
+.show-image {
 	align-self: flex-start;
 
 	flex: 0 0 245px;
@@ -52,7 +55,7 @@
 	text-decoration: none;
 }
 
-.placeholder-dj-image {
+.dj-image {
 	align-self: flex-start;
 	background-color: #bebebe;
 
