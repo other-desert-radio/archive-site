@@ -1,7 +1,8 @@
 {
 	"id": 12,
 	"title": "Derek Monypeny",
-	"image": "assets/djs/12_large.webp",
+	"image_small": "assets/djs/12_small.webp",
+	"image_large": "assets/djs/12_large.webp",
 	"bio": "<p>Born in the Arizona desert, a veteran of multiple explorations into the Sahara desert via Morocco and Western Sahara, and now a resident of the Mojave, Derek Monypeny sees his musical mission as adding to and expanding on what he calls the \"desert continuum;\" the psychedelic sirocco swirl of desert-based stringed instruments played with utter abandon by musicians the world over.</p>",
 	"socials": "<p>instagram.com/derek_monypeny</p>",
 	"showTitle": "Freedom Overspill Radio Hour",
@@ -12,7 +13,8 @@
 			"title": "Freedom Overspill Radio Hour #32, Sudanese 60s-70s",
 			"date": "2026-09-07T00:00:00.000Z",
 			"duration": 3743,
-			"image": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/3/6/7/a/58d8-06fa-4656-a054-c09d2ced7058",
+			"image_small": "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/3/6/7/a/58d8-06fa-4656-a054-c09d2ced7058",
+			"image_large": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/3/6/7/a/58d8-06fa-4656-a054-c09d2ced7058",
 			"tagIds": [30, 31],
 			"url": "https://www.mixcloud.com/otherdesertradio/derek-monypeny-freedom-overspill-radio-hour-32-sudanese-60s-70s-september-7-2026/"
 		}

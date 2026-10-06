@@ -1,7 +1,8 @@
 {
 	"id": 15,
 	"title": "temporal emissions",
-	"image": "assets/djs/15_large.webp",
+	"image_small": "assets/djs/15_small.webp",
+	"image_large": "assets/djs/15_large.webp",
 	"bio": "<p>Temporal Emissions is hosted by michael bailey, lifelong musician and sound enthusiast. Once a fan, always a fan. Determined to keep music / art / creativity a Fun experience, with the occasional F U mixed in.</p>",
 	"socials": "<p>@temporal_emissions m-bailey.com</p>",
 	"showTitle": "Temporal Emissions Episode XX",

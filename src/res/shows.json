@@ -4,12 +4,14 @@
 		"title": "Freedom Overspill Radio Hour #32, Sudanese 60s-70s",
 		"date": "2026-09-07T00:00:00.000Z",
 		"duration": 3743,
-		"image": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/3/6/7/a/58d8-06fa-4656-a054-c09d2ced7058",
+		"image_small": "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/3/6/7/a/58d8-06fa-4656-a054-c09d2ced7058",
+		"image_large": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/3/6/7/a/58d8-06fa-4656-a054-c09d2ced7058",
 		"djs": [
 			{
 				"id": 12,
 				"title": "Derek Monypeny",
-				"image": "assets/djs/12_small.webp"
+				"image_small": "assets/djs/12_small.webp",
+				"image_large": "assets/djs/12_large.webp"
 			}
 		],
 		"tagIds": [30, 31],
@@ -20,12 +22,14 @@
 		"title": "From the Mixed-Up Files of Axaxaxas Mlö #28",
 		"date": "2026-09-07T00:00:00.000Z",
 		"duration": 3673,
-		"image": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/a/7/c/4/70c7-ef22-406a-a365-93fddf0a97a3",
+		"image_small": "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/a/7/c/4/70c7-ef22-406a-a365-93fddf0a97a3",
+		"image_large": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/a/7/c/4/70c7-ef22-406a-a365-93fddf0a97a3",
 		"djs": [
 			{
 				"id": 13,
 				"title": "Justin Paszul",
-				"image": "assets/djs/13_small.webp"
+				"image_small": "assets/djs/13_small.webp",
+				"image_large": "assets/djs/13_large.webp"
 			}
 		],
 		"tagIds": [32, 33],
@@ -36,12 +40,14 @@
 		"title": "Volume 5",
 		"date": "2026-08-31T00:00:00.000Z",
 		"duration": 3067,
-		"image": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/b/d/4/5/950e-cc75-4472-a5f3-c6c48045aeb7",
+		"image_small": "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/b/d/4/5/950e-cc75-4472-a5f3-c6c48045aeb7",
+		"image_large": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/b/d/4/5/950e-cc75-4472-a5f3-c6c48045aeb7",
 		"djs": [
 			{
 				"id": 14,
 				"title": "muzizmu",
-				"image": "assets/djs/14_small.webp"
+				"image_small": "assets/djs/14_small.webp",
+				"image_large": "assets/djs/14_large.webp"
 			}
 		],
 		"tagIds": [4, 21],
@@ -52,12 +58,14 @@
 		"title": "Dance Party at Morgellons House #1",
 		"date": "2026-08-31T00:00:00.000Z",
 		"duration": 3675,
-		"image": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/3/3/4/1/d421-6a73-4d14-87bf-88afbde6b51a",
+		"image_small": "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/3/3/4/1/d421-6a73-4d14-87bf-88afbde6b51a",
+		"image_large": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/3/3/4/1/d421-6a73-4d14-87bf-88afbde6b51a",
 		"djs": [
 			{
 				"id": 13,
 				"title": "Justin Paszul",
-				"image": "assets/djs/13_small.webp"
+				"image_small": "assets/djs/13_small.webp",
+				"image_large": "assets/djs/13_large.webp"
 			}
 		],
 		"tagIds": [21, 33],
@@ -68,12 +76,14 @@
 		"title": "Constant Coverage #1",
 		"date": "2026-08-24T00:00:00.000Z",
 		"duration": 3594,
-		"image": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/a/b/7/a/e47e-c266-416c-aada-27c1528dd211",
+		"image_small": "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/a/b/7/a/e47e-c266-416c-aada-27c1528dd211",
+		"image_large": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/a/b/7/a/e47e-c266-416c-aada-27c1528dd211",
 		"djs": [
 			{
 				"id": 13,
 				"title": "Justin Paszul",
-				"image": "assets/djs/13_small.webp"
+				"image_small": "assets/djs/13_small.webp",
+				"image_large": "assets/djs/13_large.webp"
 			}
 		],
 		"tagIds": [34, 35, 36],
@@ -84,12 +94,14 @@
 		"title": "From the Mixed-Up Files of Axaxaxas Mlö #27",
 		"date": "2026-08-17T00:00:00.000Z",
 		"duration": 3636,
-		"image": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/8/f/6/1/ebba-cb90-4b9e-b5f4-c52b51cc56e6",
+		"image_small": "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/8/f/6/1/ebba-cb90-4b9e-b5f4-c52b51cc56e6",
+		"image_large": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/8/f/6/1/ebba-cb90-4b9e-b5f4-c52b51cc56e6",
 		"djs": [
 			{
 				"id": 13,
 				"title": "Justin Paszul",
-				"image": "assets/djs/13_small.webp"
+				"image_small": "assets/djs/13_small.webp",
+				"image_large": "assets/djs/13_large.webp"
 			}
 		],
 		"tagIds": [33, 37],
@@ -100,12 +112,14 @@
 		"title": "Dylan Thomas's Pickup Truck #1",
 		"date": "2026-08-10T00:00:00.000Z",
 		"duration": 3515,
-		"image": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/e/6/5/0/cff2-ecb9-4bbf-8de0-29aa73605e9c",
+		"image_small": "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/e/6/5/0/cff2-ecb9-4bbf-8de0-29aa73605e9c",
+		"image_large": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/e/6/5/0/cff2-ecb9-4bbf-8de0-29aa73605e9c",
 		"djs": [
 			{
 				"id": 13,
 				"title": "Justin Paszul",
-				"image": "assets/djs/13_small.webp"
+				"image_small": "assets/djs/13_small.webp",
+				"image_large": "assets/djs/13_large.webp"
 			}
 		],
 		"tagIds": [38],
@@ -116,12 +130,14 @@
 		"title": "Play is as it Lays Episode 6: LEO ENERGY - SULTRY SUMMER",
 		"date": "2026-08-03T00:00:00.000Z",
 		"duration": 3764,
-		"image": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/4/b/a/b/afe0-3802-41b1-9072-2ffc1ace1a25",
+		"image_small": "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/4/b/a/b/afe0-3802-41b1-9072-2ffc1ace1a25",
+		"image_large": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/4/b/a/b/afe0-3802-41b1-9072-2ffc1ace1a25",
 		"djs": [
 			{
 				"id": 16,
 				"title": "DJ Emocean",
-				"image": "assets/djs/16_small.webp"
+				"image_small": "assets/djs/16_small.webp",
+				"image_large": "assets/djs/16_large.webp"
 			}
 		],
 		"tagIds": [21, 22],
@@ -132,12 +148,14 @@
 		"title": "Lightning Rod #1",
 		"date": "2026-08-03T00:00:00.000Z",
 		"duration": 3378,
-		"image": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/5/b/6/2/0228-c3bb-4166-a27d-ec411358ee6a",
+		"image_small": "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/5/b/6/2/0228-c3bb-4166-a27d-ec411358ee6a",
+		"image_large": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/5/b/6/2/0228-c3bb-4166-a27d-ec411358ee6a",
 		"djs": [
 			{
 				"id": 13,
 				"title": "Justin Paszul",
-				"image": "assets/djs/13_small.webp"
+				"image_small": "assets/djs/13_small.webp",
+				"image_large": "assets/djs/13_large.webp"
 			}
 		],
 		"tagIds": [12, 33, 35],
@@ -148,12 +166,14 @@
 		"title": "From the Mixed-Up Files of Axaxaxas Mlö #26",
 		"date": "2026-07-27T00:00:00.000Z",
 		"duration": 3607,
-		"image": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/7/1/0/f/62ba-a377-407d-b6a7-4fd1b878ce1f",
+		"image_small": "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/7/1/0/f/62ba-a377-407d-b6a7-4fd1b878ce1f",
+		"image_large": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/7/1/0/f/62ba-a377-407d-b6a7-4fd1b878ce1f",
 		"djs": [
 			{
 				"id": 13,
 				"title": "Justin Paszul",
-				"image": "assets/djs/13_small.webp"
+				"image_small": "assets/djs/13_small.webp",
+				"image_large": "assets/djs/13_large.webp"
 			}
 		],
 		"tagIds": [22, 33, 39, 40],
@@ -164,12 +184,14 @@
 		"title": "From the Mixed-Up Files of Axaxaxas Mlö #25",
 		"date": "2026-07-13T00:00:00.000Z",
 		"duration": 3604,
-		"image": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/f/3/5/c/b8b2-710a-4191-88a4-9279116d98d6",
+		"image_small": "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/f/3/5/c/b8b2-710a-4191-88a4-9279116d98d6",
+		"image_large": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/f/3/5/c/b8b2-710a-4191-88a4-9279116d98d6",
 		"djs": [
 			{
 				"id": 13,
 				"title": "Justin Paszul",
-				"image": "assets/djs/13_small.webp"
+				"image_small": "assets/djs/13_small.webp",
+				"image_large": "assets/djs/13_large.webp"
 			}
 		],
 		"tagIds": [33, 41, 42],
@@ -180,12 +202,14 @@
 		"title": "Play is as it Lays Episode 5: CANCER SEASON SUMMER CLUB ENERGY",
 		"date": "2026-06-29T00:00:00.000Z",
 		"duration": 4395,
-		"image": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/d/7/9/b/8f68-c5fe-466f-9769-87e6d86e4512",
+		"image_small": "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/d/7/9/b/8f68-c5fe-466f-9769-87e6d86e4512",
+		"image_large": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/d/7/9/b/8f68-c5fe-466f-9769-87e6d86e4512",
 		"djs": [
 			{
 				"id": 16,
 				"title": "DJ Emocean",
-				"image": "assets/djs/16_small.webp"
+				"image_small": "assets/djs/16_small.webp",
+				"image_large": "assets/djs/16_large.webp"
 			}
 		],
 		"tagIds": [21],
@@ -196,12 +220,14 @@
 		"title": "From the Mixed-Up Files of Axaxaxas Mlö #24",
 		"date": "2026-06-29T00:00:00.000Z",
 		"duration": 3405,
-		"image": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/f/5/d/5/3c5d-0746-4d29-b9ba-67bb5ce241a9",
+		"image_small": "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/f/5/d/5/3c5d-0746-4d29-b9ba-67bb5ce241a9",
+		"image_large": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/f/5/d/5/3c5d-0746-4d29-b9ba-67bb5ce241a9",
 		"djs": [
 			{
 				"id": 13,
 				"title": "Justin Paszul",
-				"image": "assets/djs/13_small.webp"
+				"image_small": "assets/djs/13_small.webp",
+				"image_large": "assets/djs/13_large.webp"
 			}
 		],
 		"tagIds": [33, 43],
@@ -212,12 +238,14 @@
 		"title": "From the Mixed-Up Files of Axaxaxas Mlö #23",
 		"date": "2026-06-08T00:00:00.000Z",
 		"duration": 3625,
-		"image": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/e/2/a/1/bea4-0ba4-4c26-a6bf-402742da44f9",
+		"image_small": "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/e/2/a/1/bea4-0ba4-4c26-a6bf-402742da44f9",
+		"image_large": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/e/2/a/1/bea4-0ba4-4c26-a6bf-402742da44f9",
 		"djs": [
 			{
 				"id": 13,
 				"title": "Justin Paszul",
-				"image": "assets/djs/13_small.webp"
+				"image_small": "assets/djs/13_small.webp",
+				"image_large": "assets/djs/13_large.webp"
 			}
 		],
 		"tagIds": [12, 33],
@@ -228,12 +256,14 @@
 		"title": "From the Mixed-Up Files of Axaxaxas Mlö #22",
 		"date": "2026-05-25T00:00:00.000Z",
 		"duration": 3626,
-		"image": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/3/5/f/d/07c6-8858-4f8e-942a-366d8be9b97d",
+		"image_small": "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/3/5/f/d/07c6-8858-4f8e-942a-366d8be9b97d",
+		"image_large": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/3/5/f/d/07c6-8858-4f8e-942a-366d8be9b97d",
 		"djs": [
 			{
 				"id": 13,
 				"title": "Justin Paszul",
-				"image": "assets/djs/13_small.webp"
+				"image_small": "assets/djs/13_small.webp",
+				"image_large": "assets/djs/13_large.webp"
 			}
 		],
 		"tagIds": [12, 33],
@@ -244,12 +274,14 @@
 		"title": "From the Mixed-Up Files of Axaxaxas Mlö #21",
 		"date": "2026-05-11T00:00:00.000Z",
 		"duration": 3616,
-		"image": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/b/8/7/c/c561-2ce3-4c63-b8e1-72f00a2fa6d7",
+		"image_small": "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/b/8/7/c/c561-2ce3-4c63-b8e1-72f00a2fa6d7",
+		"image_large": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/b/8/7/c/c561-2ce3-4c63-b8e1-72f00a2fa6d7",
 		"djs": [
 			{
 				"id": 13,
 				"title": "Justin Paszul",
-				"image": "assets/djs/13_small.webp"
+				"image_small": "assets/djs/13_small.webp",
+				"image_large": "assets/djs/13_large.webp"
 			}
 		],
 		"tagIds": [12, 33],
@@ -260,12 +292,14 @@
 		"title": "Volume 4",
 		"date": "2026-05-04T00:00:00.000Z",
 		"duration": 2490,
-		"image": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/5/0/9/7/1faa-0fe1-433e-b58b-518683808f31",
+		"image_small": "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/5/0/9/7/1faa-0fe1-433e-b58b-518683808f31",
+		"image_large": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/5/0/9/7/1faa-0fe1-433e-b58b-518683808f31",
 		"djs": [
 			{
 				"id": 14,
 				"title": "muzizmu",
-				"image": "assets/djs/14_small.webp"
+				"image_small": "assets/djs/14_small.webp",
+				"image_large": "assets/djs/14_large.webp"
 			}
 		],
 		"tagIds": [4, 21, 27],
@@ -276,12 +310,14 @@
 		"title": "Play is as it Lays Episode 4: A TAURUS SEASON JOURNEY THROUGH MOODY DISCO",
 		"date": "2026-05-04T00:00:00.000Z",
 		"duration": 5033,
-		"image": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/7/6/7/2/ac84-650c-4303-9721-bead82923063",
+		"image_small": "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/7/6/7/2/ac84-650c-4303-9721-bead82923063",
+		"image_large": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/7/6/7/2/ac84-650c-4303-9721-bead82923063",
 		"djs": [
 			{
 				"id": 16,
 				"title": "DJ Emocean",
-				"image": "assets/djs/16_small.webp"
+				"image_small": "assets/djs/16_small.webp",
+				"image_large": "assets/djs/16_large.webp"
 			}
 		],
 		"tagIds": [6, 21],
@@ -292,12 +328,14 @@
 		"title": "From the Mixed-Up Files of Axaxaxas Mlö #20",
 		"date": "2026-04-20T00:00:00.000Z",
 		"duration": 3608,
-		"image": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/f/1/8/2/0827-485e-4b81-8947-74ce20c09bec",
+		"image_small": "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/f/1/8/2/0827-485e-4b81-8947-74ce20c09bec",
+		"image_large": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/f/1/8/2/0827-485e-4b81-8947-74ce20c09bec",
 		"djs": [
 			{
 				"id": 13,
 				"title": "Justin Paszul",
-				"image": "assets/djs/13_small.webp"
+				"image_small": "assets/djs/13_small.webp",
+				"image_large": "assets/djs/13_large.webp"
 			}
 		],
 		"tagIds": [12, 33, 41, 44],
@@ -308,12 +346,14 @@
 		"title": "Play is as it Lays Episode 3: ARIES SEASON: DANCE AS RESISTANCE",
 		"date": "2026-04-06T00:00:00.000Z",
 		"duration": 4357,
-		"image": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/8/b/1/2/1bf0-284b-4ad6-8fe2-591fca9b3322",
+		"image_small": "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/8/b/1/2/1bf0-284b-4ad6-8fe2-591fca9b3322",
+		"image_large": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/8/b/1/2/1bf0-284b-4ad6-8fe2-591fca9b3322",
 		"djs": [
 			{
 				"id": 16,
 				"title": "DJ Emocean",
-				"image": "assets/djs/16_small.webp"
+				"image_small": "assets/djs/16_small.webp",
+				"image_large": "assets/djs/16_large.webp"
 			}
 		],
 		"tagIds": [],

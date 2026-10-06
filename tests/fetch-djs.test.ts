@@ -7,15 +7,28 @@ test("loads the validated DJ archive summaries from a file URL", async () => {
 	const djs = await fetchDJs(pathToFileURL("tests/res/djs.json"));
 
 	assert.deepEqual(
-		djs.map(({ id, title, image, tagIds }) => ({ id, title, image, tagIds })),
+		djs.map(({ id, title, image_small, image_large, tagIds }) => ({
+			id,
+			title,
+			image_small,
+			image_large,
+			tagIds,
+		})),
 		[
 			{
 				id: 1,
 				title: "Test DJ One",
-				image: "images/djs/1.jpg",
+				image_small: "images/djs/1.jpg",
+				image_large: "images/djs/1.jpg",
 				tagIds: [1, 2],
 			},
-			{ id: 2, title: "Test DJ Two", image: "images/djs/2.png", tagIds: [] },
+			{
+				id: 2,
+				title: "Test DJ Two",
+				image_small: "images/djs/2.png",
+				image_large: "images/djs/2.png",
+				tagIds: [],
+			},
 		],
 	);
 });

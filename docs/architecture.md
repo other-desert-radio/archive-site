@@ -65,3 +65,10 @@ these defaults.
 - `bun run lint` runs formatting, shell syntax, ESLint, and TypeScript checks.
 
 When changing routing, components, styling, content, or internationalization, consult the relevant Astro guide linked from `AGENTS.md` and update this document if the architecture changes materially.
+
+## Archive image fields
+
+Show records, DJ summaries, full DJ profiles, and DJs nested in shows carry
+required `image_small` and `image_large` references. DJ listing cards use
+`image_small`; DJ profile photos use `image_large`. Show cards currently
+render placeholders while retaining both references in their validated data.

@@ -4,7 +4,8 @@ import { isMatching, P } from "ts-pattern";
 const HydratedDJPattern = {
 	id: P.number,
 	title: P.string,
-	image: P.string,
+	image_small: P.string,
+	image_large: P.string,
 	bio: P.string,
 	socials: P.string,
 	showTitle: P.string,

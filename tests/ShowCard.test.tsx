@@ -17,8 +17,16 @@ test("renders normalized show and DJ detail links", () => {
 				title: "Test Show",
 				date: "2026-05-25T00:00:00.000Z",
 				duration: 3600,
-				image: "images/shows/1.jpg",
-				djs: [{ id: 2, title: "Test DJ", image: "images/djs/2.jpg" }],
+				image_small: "images/shows/1.jpg",
+				image_large: "images/shows/1.jpg",
+				djs: [
+					{
+						id: 2,
+						title: "Test DJ",
+						image_small: "images/djs/2.jpg",
+						image_large: "images/djs/2.jpg",
+					},
+				],
 				tagIds: [],
 				url: "https://www.mixcloud.com/example/test-show/",
 			}}

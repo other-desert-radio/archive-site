@@ -4,8 +4,20 @@ import { renderToStaticMarkup } from "react-dom/server";
 import DJsPane from "../src/components/dj/DJsPane";
 
 const djs = [
-	{ id: 11, title: "DJ AKĀSHA", image: "images/djs/11.jpg", tagIds: [1] },
-	{ id: 16, title: "DJ Emocean", image: "images/djs/16.png", tagIds: [] },
+	{
+		id: 11,
+		title: "DJ AKĀSHA",
+		image_small: "images/djs/11.jpg",
+		image_large: "images/djs/11.jpg",
+		tagIds: [1],
+	},
+	{
+		id: 16,
+		title: "DJ Emocean",
+		image_small: "images/djs/16.png",
+		image_large: "images/djs/16.png",
+		tagIds: [],
+	},
 ];
 
 const tags = new Map([[1, { id: 1, title: "Ambient", color: "#000000" }]]);
@@ -25,6 +37,7 @@ test("renders base-aware links for supplied DJs", () => {
 
 	assert.match(markup, /href="\/archive-site\/djs\/11"/);
 	assert.match(markup, /href="\/archive-site\/djs\/16"/);
+	assert.match(markup, /src="\/archive-site\/images\/djs\/11.jpg"/);
 	assert.match(markup, />DJ AKĀSHA</);
 	assert.match(markup, />DJ Emocean</);
 	assert.match(markup, />Ambient</);

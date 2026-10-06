@@ -2,25 +2,29 @@
 	{
 		"id": 11,
 		"title": "DJ AKĀSHA",
-		"image": "assets/djs/11_small.webp",
+		"image_small": "assets/djs/11_small.webp",
+		"image_large": "assets/djs/11_large.webp",
 		"tagIds": [3, 4, 5, 6, 7]
 	},
 	{
 		"id": 16,
 		"title": "DJ Emocean",
-		"image": "assets/djs/16_small.webp",
+		"image_small": "assets/djs/16_small.webp",
+		"image_large": "assets/djs/16_large.webp",
 		"tagIds": [4, 6, 21, 22]
 	},
 	{
 		"id": 12,
 		"title": "Derek Monypeny",
-		"image": "assets/djs/12_small.webp",
+		"image_small": "assets/djs/12_small.webp",
+		"image_large": "assets/djs/12_large.webp",
 		"tagIds": [8, 9, 10, 30, 31]
 	},
 	{
 		"id": 13,
 		"title": "Justin Paszul",
-		"image": "assets/djs/13_small.webp",
+		"image_small": "assets/djs/13_small.webp",
+		"image_large": "assets/djs/13_large.webp",
 		"tagIds": [
 			11, 12, 13, 21, 22, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44
 		]
@@ -28,13 +32,15 @@
 	{
 		"id": 14,
 		"title": "muzizmu",
-		"image": "assets/djs/14_small.webp",
+		"image_small": "assets/djs/14_small.webp",
+		"image_large": "assets/djs/14_large.webp",
 		"tagIds": [4, 14, 15, 16, 17, 18, 21, 27]
 	},
 	{
 		"id": 15,
 		"title": "temporal emissions",
-		"image": "assets/djs/15_small.webp",
+		"image_small": "assets/djs/15_small.webp",
+		"image_large": "assets/djs/15_large.webp",
 		"tagIds": [19, 20]
 	}
 ]

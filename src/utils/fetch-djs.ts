@@ -4,7 +4,8 @@ import { isMatching, P } from "ts-pattern";
 const DJPattern = {
 	id: P.number,
 	title: P.string,
-	image: P.string,
+	image_small: P.string,
+	image_large: P.string,
 	tagIds: P.array(P.number),
 };
 
