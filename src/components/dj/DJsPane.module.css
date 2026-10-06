@@ -5,6 +5,8 @@
 	margin-inline: auto;
 	grid-template-columns: repeat(2, minmax(28rem, 1fr));
 	gap: 3rem 4rem;
+
+	padding-bottom: var(--container-grid-padding-bottom);
 }
 
 @media (min-width: 1800px) {
