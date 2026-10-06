@@ -24,8 +24,3 @@ coverage/
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json
-
-
-#TEMPORARy!!
-
-public/assets/*
