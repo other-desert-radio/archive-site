@@ -6,12 +6,13 @@
 }
 
 .show-title {
-	font-size: 3rem;
+	font-size: 2rem;
 	margin: 0;
 	font-weight: normal;
 	color: inherit;
 	text-decoration: none;
 }
+
 .show-title:hover {
 	text-decoration: underline;
 }
@@ -23,8 +24,8 @@
 .show-image {
 	align-self: flex-start;
 
-	flex: 0 0 245px;
-	width: 235px;
+	flex: 0 0 330px;
+	width: 320px;
 	aspect-ratio: 1;
 	background-color: #bebebe;
 }

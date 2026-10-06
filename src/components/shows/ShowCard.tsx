@@ -42,7 +42,7 @@ export default function ShowCard({ show, base, tags }: Props) {
 		<article className={styles["show-card"]}>
 			<img
 				className={`${styles["show-image"]} image-border-primary`}
-				src={`${show.image_small}`}
+				src={`${show.image_large}`}
 				alt={show.title}
 			/>
 			<div className={styles["trailing-content"]}>
