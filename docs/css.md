@@ -10,6 +10,8 @@
 - Prefer bounded fluid sizes with `clamp()` and percentage widths over fixed
   sizes at every breakpoint. Cap images at their container width; avoid fixed
   flex bases that become heights when a row stacks into a column.
+- Keep wide listing grids aligned with the category tabs; avoid an additional
+  width cap or side inset within the shared page container.
 
 ## Breakpoints
 

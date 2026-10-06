@@ -11,6 +11,8 @@
 
 @media (min-width: 1600px) {
 	.show-container-grid {
+		max-width: none;
+		margin-inline: 0;
 		grid-template-columns: repeat(2, minmax(28rem, 1fr));
 	}
 }
