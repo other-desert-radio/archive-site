@@ -7,6 +7,9 @@
 - Build highly responsive layouts: adapt to available width, let text and
   controls wrap, and avoid horizontal overflow. Verify narrow phones through
   wide desktops.
+- Prefer bounded fluid sizes with `clamp()` and percentage widths over fixed
+  sizes at every breakpoint. Cap images at their container width; avoid fixed
+  flex bases that become heights when a row stacks into a column.
 
 ## Breakpoints
 
