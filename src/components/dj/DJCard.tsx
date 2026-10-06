@@ -16,7 +16,11 @@ export default function DJCard({ dj, base, tags }: Props) {
 			className={styles["dj-card"]}
 			aria-label={`View ${dj.title}`}
 		>
-			<div className={`${styles["placeholder-image"]} image-border-primary`} />
+			<img
+				className={`${styles["image"]} image-border-primary`}
+				src={`${base}/assets/djs/${dj.id}_small.webp`}
+				alt={dj.title}
+			/>
 
 			<div className={styles["trailing-content"]}>
 				<h2 className={styles["dj-title"]}>{dj.title}</h2>

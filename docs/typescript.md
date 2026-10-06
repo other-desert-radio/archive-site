@@ -49,6 +49,10 @@ components.
 
 ## Respect optional values
 
+Use bracket access for CSS module classes, such as `styles["image"]`. Their
+types use an index signature, and `noPropertyAccessFromIndexSignature` requires
+this syntax. Biome's `useLiteralKeys` rule is disabled so formatting preserves it.
+
 Prefer `undefined` and optional properties when a value is absent. Do not add
 `null` as a second representation of absence without an integration reason.
 When data comes from an API, CMS, or content source that uses `null`, normalize
