@@ -11,6 +11,8 @@ type Props = {
   dj: HydratedDJ;
 };
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 /** Generates static DJ detail pages from the archive summary during Astro builds. */
 export async function getStaticPaths() {
   const djs = await fetchDJs(pathToFileURL("src/res/djs_brief.json"));
@@ -26,7 +28,6 @@ export async function getStaticPaths() {
 }
 
 const { dj } = Astro.props as Props;
-const base = import.meta.env.BASE_URL;
 const tags = await fetchTags(pathToFileURL("src/res/tags.json"));
 
 const hydratedTags = hydrateTags(dj, tags);
@@ -40,7 +41,7 @@ const hydratedTags = hydrateTags(dj, tags);
   <div class="container">
     <h1 class="page-title">{dj.title}</h1>
     <div class="leading-container">
-      <img class="photo" src={`${base.replace(/\/$/, "")}/${dj.image_large}`} alt={dj.title} />
+      <img class="photo" src={`${base}/${dj.image_large}`} alt={dj.title} />
       <div class="tag-container">
         {hydratedTags.map((tag) => <TagView tag={tag} />)}
       </div>
