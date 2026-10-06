@@ -24,7 +24,7 @@ const renderDJs = (djs: Show["djs"], base: string) =>
 			aria-label={`View ${dj.title}`}
 		>
 			<img
-				className={`${styles["dj-image"]} image-border-primary`}
+				className={`${styles["dj-image"]} image-border-secondary`}
 				src={`${base}/${dj.image_small}`}
 				alt={dj.title}
 			/>
