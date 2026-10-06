@@ -47,12 +47,17 @@ const title = (() => {
 
 <style>
   nav {
+    min-height: var(--nav-height);
     display: grid;
     grid-template-columns: 75px auto;
     padding: 25px 50px;
     align-items: center;
 
     font-size: 0.875rem;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
 
     background: black;
     color: white;

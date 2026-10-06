@@ -43,3 +43,7 @@ textarea {
 .image-border-primary {
 	border: 3px solid black;
 }
+
+.image-border-secondary {
+	border: 2px solid black;
+}
