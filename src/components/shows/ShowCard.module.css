@@ -49,6 +49,7 @@
 
 	align-items: center;
 	padding: 0.3125rem;
+	border: 1px solid transparent;
 	max-width: 100%;
 
 	flex-direction: row;
@@ -60,7 +61,7 @@
 }
 
 .dj-container:hover {
-	border: 1px solid black;
+	border-color: black;
 	background-color: white;
 }
 
