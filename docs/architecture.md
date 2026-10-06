@@ -70,5 +70,5 @@ When changing routing, components, styling, content, or internationalization, co
 
 Show records, DJ summaries, full DJ profiles, and DJs nested in shows carry
 required `image_small` and `image_large` references. DJ listing cards use
-`image_small`; DJ profile photos use `image_large`. Show cards currently
-render placeholders while retaining both references in their validated data.
+`image_small`; DJ profile photos and show detail artwork use `image_large`.
+Show cards use `image_small` for artwork and associated DJ photos.

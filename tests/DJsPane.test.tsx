@@ -8,14 +8,14 @@ const djs = [
 		id: 11,
 		title: "DJ AKĀSHA",
 		image_small: "images/djs/11.jpg",
-		image_large: "images/djs/11.jpg",
+		image_large: "images/djs/11_large.jpg",
 		tagIds: [1],
 	},
 	{
 		id: 16,
 		title: "DJ Emocean",
 		image_small: "images/djs/16.png",
-		image_large: "images/djs/16.png",
+		image_large: "images/djs/16_large.png",
 		tagIds: [],
 	},
 ];
@@ -38,6 +38,13 @@ test("renders base-aware links for supplied DJs", () => {
 	assert.match(markup, /href="\/archive-site\/djs\/11"/);
 	assert.match(markup, /href="\/archive-site\/djs\/16"/);
 	assert.match(markup, /src="\/archive-site\/images\/djs\/11.jpg"/);
+	assert.match(
+		markup,
+		/<img[^>]+src="\/archive-site\/images\/djs\/16.png"[^>]+alt="DJ Emocean"/,
+	);
+	assert.match(markup, /<img[^>]+alt="DJ AKĀSHA"/);
+	assert.doesNotMatch(markup, /_large/);
+	assert.doesNotMatch(markup, /\/archive-site\/\//);
 	assert.match(markup, />DJ AKĀSHA</);
 	assert.match(markup, />DJ Emocean</);
 	assert.match(markup, />Ambient</);
