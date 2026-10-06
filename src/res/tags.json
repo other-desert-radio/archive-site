@@ -1,17 +1,7 @@
 [
 	{
-		"id": 1,
-		"title": "asdsad",
-		"color": "#416b30"
-	},
-	{
-		"id": 2,
-		"title": "asd",
-		"color": "#84f8de"
-	},
-	{
 		"id": 3,
-		"title": "Electronic",
+		"title": "electronic",
 		"color": "#c2c5c5"
 	},
 	{
@@ -27,7 +17,7 @@
 	{
 		"id": 6,
 		"title": "Disco",
-		"color": "#220516"
+		"color": "#c061cb"
 	},
 	{
 		"id": 7,
@@ -67,7 +57,7 @@
 	{
 		"id": 14,
 		"title": "dancehall",
-		"color": "#46136e"
+		"color": "#c061cb"
 	},
 	{
 		"id": 15,
@@ -121,8 +111,8 @@
 	},
 	{
 		"id": 25,
-		"title": "Ambient",
-		"color": "#610390"
+		"title": "ambient",
+		"color": "#a05bd2"
 	},
 	{
 		"id": 26,
@@ -133,5 +123,110 @@
 		"id": 27,
 		"title": "trip",
 		"color": "#e12885"
+	},
+	{
+		"id": 30,
+		"title": "Sudanese folk",
+		"color": "#3569a5",
+		"mixcloud_key": "/genres/sudanese-folk/",
+		"mixcloud_url": "https://www.mixcloud.com/genres/sudanese-folk/"
+	},
+	{
+		"id": 31,
+		"title": "Sundanese pop",
+		"color": "#cdab8f",
+		"mixcloud_key": "/genres/sundanese-pop/",
+		"mixcloud_url": "https://www.mixcloud.com/genres/sundanese-pop/"
+	},
+	{
+		"id": 32,
+		"title": "Avant-Garde",
+		"color": "#0b56d4",
+		"mixcloud_key": "/genres/avant-garde/",
+		"mixcloud_url": "https://www.mixcloud.com/genres/avant-garde/"
+	},
+	{
+		"id": 33,
+		"title": "Experimental",
+		"color": "#a53f36",
+		"mixcloud_key": "/genres/experimental/",
+		"mixcloud_url": "https://www.mixcloud.com/genres/experimental/"
+	},
+	{
+		"id": 34,
+		"title": "Covers",
+		"color": "#129a9a",
+		"mixcloud_key": "/genres/covers/",
+		"mixcloud_url": "https://www.mixcloud.com/genres/covers/"
+	},
+	{
+		"id": 35,
+		"title": "Jazz",
+		"color": "#13db0e",
+		"mixcloud_key": "/genres/jazz/",
+		"mixcloud_url": "https://www.mixcloud.com/genres/jazz/"
+	},
+	{
+		"id": 36,
+		"title": "Rock",
+		"color": "#9daca0",
+		"mixcloud_key": "/genres/rock/",
+		"mixcloud_url": "https://www.mixcloud.com/genres/rock/"
+	},
+	{
+		"id": 37,
+		"title": "Folk",
+		"color": "#002ab2",
+		"mixcloud_key": "/genres/folk/",
+		"mixcloud_url": "https://www.mixcloud.com/genres/folk/"
+	},
+	{
+		"id": 38,
+		"title": "Country",
+		"color": "#ee768f",
+		"mixcloud_key": "/genres/country/",
+		"mixcloud_url": "https://www.mixcloud.com/genres/country/"
+	},
+	{
+		"id": 39,
+		"title": "Prog",
+		"color": "#5b60f2",
+		"mixcloud_key": "/genres/prog/",
+		"mixcloud_url": "https://www.mixcloud.com/genres/prog/"
+	},
+	{
+		"id": 40,
+		"title": "Punk",
+		"color": "#cd91f6",
+		"mixcloud_key": "/genres/punk/",
+		"mixcloud_url": "https://www.mixcloud.com/genres/punk/"
+	},
+	{
+		"id": 41,
+		"title": "Japanese",
+		"color": "#8f9df9",
+		"mixcloud_key": "/genres/japanese/",
+		"mixcloud_url": "https://www.mixcloud.com/genres/japanese/"
+	},
+	{
+		"id": 42,
+		"title": "Soul",
+		"color": "#f686c4",
+		"mixcloud_key": "/genres/soul/",
+		"mixcloud_url": "https://www.mixcloud.com/genres/soul/"
+	},
+	{
+		"id": 43,
+		"title": "Weirdo",
+		"color": "#e77ff7",
+		"mixcloud_key": "/genres/weirdo/",
+		"mixcloud_url": "https://www.mixcloud.com/genres/weirdo/"
+	},
+	{
+		"id": 44,
+		"title": "Ukranian",
+		"color": "#89f9df",
+		"mixcloud_key": "/genres/ukranian/",
+		"mixcloud_url": "https://www.mixcloud.com/genres/ukranian/"
 	}
 ]
