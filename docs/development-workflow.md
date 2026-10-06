@@ -46,6 +46,8 @@ changes materially.
 - Astro pages, layouts, or content: `bun run check`
 - TypeScript, CSS, JavaScript, or configuration: `bun run lint`
 - Unit-tested behavior: `bun run test`
+  The detail-image regression test also builds the site and checks generated
+  show and DJ pages for large artwork and matching alt text.
 - Routing, deployment configuration, or production behavior: `bun run build`
 - Broad changes: run `bun run lint`, `bun run check`, and `bun run build`
 

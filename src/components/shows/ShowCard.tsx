@@ -12,6 +12,8 @@ type Props = {
 
 /**
  * Renders the compact DJ links associated with a show.
+ *
+ * TODO: dj.image_tiny ?
  */
 const renderDJs = (djs: Show["djs"], base: string) =>
 	djs.map((dj) => (
@@ -21,8 +23,10 @@ const renderDJs = (djs: Show["djs"], base: string) =>
 			className={styles["dj-container"]}
 			aria-label={`View ${dj.title}`}
 		>
-			<div
-				className={`${styles["placeholder-dj-image"]} image-border-primary`}
+			<img
+				className={`${styles["dj-image"]} image-border-primary`}
+				src={`${base}/${dj.image_small}`}
+				alt={dj.title}
 			/>
 			<span className={styles["dj-name-title"]}>{dj.title}</span>
 		</a>
@@ -36,7 +40,11 @@ export default function ShowCard({ show, base, tags }: Props) {
 
 	return (
 		<article className={styles["show-card"]}>
-			<div className={`${styles["placeholder-widget"]} image-border-primary`} />
+			<img
+				className={`${styles["show-image"]} image-border-primary`}
+				src={`${show.image_small}`}
+				alt={show.title}
+			/>
 			<div className={styles["trailing-content"]}>
 				<a
 					href={`${detailBase}/shows/${show.id}`}

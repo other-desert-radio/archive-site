@@ -12,8 +12,16 @@ test("loads shows with validated date, asset, URL, and nested DJ data", async ()
 			title: "Test Show",
 			date: "2026-05-25T00:00:00.000Z",
 			duration: 3600,
-			image: "images/shows/1.jpg",
-			djs: [{ id: 2, title: "Test DJ", image: "images/djs/2.jpg" }],
+			image_small: "images/shows/1.jpg",
+			image_large: "images/shows/1_large.jpg",
+			djs: [
+				{
+					id: 2,
+					title: "Test DJ",
+					image_small: "images/djs/2.jpg",
+					image_large: "images/djs/2_large.jpg",
+				},
+			],
 			tagIds: [1, 2],
 			url: "https://www.mixcloud.com/example/test-show/",
 		},

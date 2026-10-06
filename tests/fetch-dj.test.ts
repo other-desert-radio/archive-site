@@ -9,7 +9,8 @@ test("loads a validated hydrated DJ from a file URL", async () => {
 	assert.deepEqual(dj, {
 		id: 1,
 		title: "Test DJ One",
-		image: "images/djs/1.jpg",
+		image_small: "images/djs/1.jpg",
+		image_large: "images/djs/1_large.jpg",
 		bio: "<p>Test biography.</p>",
 		socials: "<p>@testdjone</p>",
 		showTitle: "Test Transmission",

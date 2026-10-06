@@ -16,6 +16,9 @@
 		"enabled": true,
 		"rules": {
 			"preset": "recommended",
+			"complexity": {
+				"useLiteralKeys": "off"
+			},
 			"style": {
 				"useConsistentTypeDefinitions": {
 					"level": "error",

@@ -17,8 +17,16 @@ test("renders normalized show and DJ detail links", () => {
 				title: "Test Show",
 				date: "2026-05-25T00:00:00.000Z",
 				duration: 3600,
-				image: "images/shows/1.jpg",
-				djs: [{ id: 2, title: "Test DJ", image: "images/djs/2.jpg" }],
+				image_small: "https://cdn.example.com/show-small.jpg",
+				image_large: "images/shows/1_large.jpg",
+				djs: [
+					{
+						id: 2,
+						title: "Test DJ",
+						image_small: "images/djs/2.jpg",
+						image_large: "images/djs/2_large.jpg",
+					},
+				],
 				tagIds: [],
 				url: "https://www.mixcloud.com/example/test-show/",
 			}}
@@ -28,5 +36,14 @@ test("renders normalized show and DJ detail links", () => {
 
 	assert.match(markup, /href="\/archive-site\/shows\/1"/);
 	assert.match(markup, /href="\/archive-site\/djs\/2"/);
+	assert.match(
+		markup,
+		/<img[^>]+src="https:\/\/cdn.example.com\/show-small.jpg"[^>]+alt="Test Show"/,
+	);
+	assert.match(
+		markup,
+		/<img[^>]+src="\/archive-site\/images\/djs\/2.jpg"[^>]+alt="Test DJ"/,
+	);
+	assert.doesNotMatch(markup, /_large/);
 	assert.doesNotMatch(markup, /\/archive-site\/\//);
 });

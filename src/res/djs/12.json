@@ -1,39 +1,23 @@
 {
 	"id": 12,
 	"title": "Derek Monypeny",
-	"image": "assets/djs/12.jpg",
+	"image_small": "assets/djs/12_small.webp",
+	"image_large": "assets/djs/12_large.webp",
 	"bio": "<p>Born in the Arizona desert, a veteran of multiple explorations into the Sahara desert via Morocco and Western Sahara, and now a resident of the Mojave, Derek Monypeny sees his musical mission as adding to and expanding on what he calls the \"desert continuum;\" the psychedelic sirocco swirl of desert-based stringed instruments played with utter abandon by musicians the world over.</p>",
 	"socials": "<p>instagram.com/derek_monypeny</p>",
 	"showTitle": "Freedom Overspill Radio Hour",
 	"showDescription": "60-minute themed episode, usually based on a specific global region and sounds therein",
 	"shows": [
 		{
-			"id": 2,
-			"title": "Freedom Overspill Episode Eight, Terry Riley + Don Cherry, Unreleased",
-			"date": "2021-03-08T00:00:00.000Z",
-			"duration": 12722,
-			"image": "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/e/2/4/2/6470-ce13-4ca4-8bc6-2f0ee48b71d3",
-			"tagIds": [25],
-			"url": "https://www.mixcloud.com/otherdesertradio/derek-monypeny-freedom-overspill-episode-vii-heavy-japan-february-15-2021/"
-		},
-		{
-			"id": 3,
-			"title": "Freedom Overspill Episode One",
-			"date": "2020-08-03T00:00:00.000Z",
-			"duration": 3722,
-			"image": "https://thumbnailer.mixcloud.com/unsafe/300x300/profile/d/d/c/7/1673-4d90-448d-a5e8-9ea9903c68d4",
-			"tagIds": [],
-			"url": "https://www.mixcloud.com/otherdesertradio/derek-freedom-overspill-episode-one-august-3-2020/"
-		},
-		{
-			"id": 1,
-			"title": "Mauritania Mix",
-			"date": "2020-04-13T00:00:00.000Z",
-			"duration": 3541,
-			"image": "https://thumbnailer.mixcloud.com/unsafe/300x300/profile/d/d/c/7/1673-4d90-448d-a5e8-9ea9903c68d4",
-			"tagIds": [23, 24],
-			"url": "https://www.mixcloud.com/otherdesertradio/derek-monypeny-mauritania-mix/"
+			"id": 8,
+			"title": "Freedom Overspill Radio Hour #32, Sudanese 60s-70s",
+			"date": "2026-09-07T00:00:00.000Z",
+			"duration": 3743,
+			"image_small": "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/3/6/7/a/58d8-06fa-4656-a054-c09d2ced7058",
+			"image_large": "https://thumbnailer.mixcloud.com/unsafe/1024x1024/extaudio/3/6/7/a/58d8-06fa-4656-a054-c09d2ced7058",
+			"tagIds": [30, 31],
+			"url": "https://www.mixcloud.com/otherdesertradio/derek-monypeny-freedom-overspill-radio-hour-32-sudanese-60s-70s-september-7-2026/"
 		}
 	],
-	"tagIds": [8, 9, 10, 23, 24, 25]
+	"tagIds": [8, 9, 10, 30, 31]
 }

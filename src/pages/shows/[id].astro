@@ -39,7 +39,7 @@ const hydratedTags = hydrateTags(show, tags);
       <p>{formatDate(show.date)}</p>
     </div>
     <div class="leading-container">
-      <div class="photo-placeholder"></div>
+      <img class="photo" src={show.image_large} alt={show.title} />
       <div class="tag-container">
         {hydratedTags.map((tag) => <TagView tag={tag} />)}
       </div>
@@ -70,10 +70,11 @@ const hydratedTags = hydrateTags(show, tags);
     margin: 0 !important;
   }
 
-  .photo-placeholder {
+  .photo {
     width: 100%;
     max-width: 300px;
     aspect-ratio: 1;
+    object-fit: cover;
     background-color: #bebebe;
     border: 6px solid black;
   }
