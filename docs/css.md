@@ -29,3 +29,23 @@ numbers or convert them to nearby `rem` values.
 
 Use `min-width` for styles at and above a breakpoint, and `max-width` for styles
 at and below it.
+
+## Responsive density
+
+Shared presentation tokens live in `src/styles/styles.css`. Keep the root
+font size at `100%`; use `--density-unit` and the semantic typography, spacing,
+artwork, and border tokens for visible sizes. The density unit is `0.8rem`
+through 1600px, grows fluidly between 1600px and 1800px, and is `1rem` at
+1800px and above. This approximates an 80% presentation on laptops while
+preserving browser font preferences and the existing wide-screen sizes.
+Container width caps remain unscaled to preserve large-screen alignment.
+
+Show listings use two columns from 1023px. DJ listings retain two columns
+above 1023px and three from 1800px. Phone stacking and title reductions remain
+in place. Shared detail classes keep show and DJ artwork, gaps, and wrapping
+consistent. Verify these layouts in the browser, including long names and
+tags, at 320px, 332px, 750px, 1440px, and wide desktop widths.
+
+Category tabs and navigation items wrap naturally when their combined widths
+exceed the available space. Keep each tab and the return link together, and
+allow the navigation title to wrap within its own line on tiny screens.

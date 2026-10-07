@@ -1,12 +1,16 @@
 .show-card {
 	display: flex;
 	flex-direction: row;
-	gap: clamp(1rem, 2vw, 1.5rem);
+	gap: clamp(var(--space-sm), 2vw, var(--space-md));
 	min-width: 0;
 }
 
 .show-title {
-	font-size: clamp(1.5rem, 1.125rem + 1vw, 2rem);
+	font-size: clamp(
+		var(--space-md),
+		calc(var(--density-unit) * 1.125 + 1vw),
+		var(--space-lg)
+	);
 	margin: 0;
 	font-weight: normal;
 	color: inherit;
@@ -25,12 +29,12 @@
 	align-self: flex-start;
 
 	flex: 0 1 auto;
-	width: clamp(12rem, 40%, 20.625rem);
+	width: clamp(var(--show-artwork-min), 40%, var(--show-artwork-max));
 	max-width: 100%;
 	height: auto;
 	aspect-ratio: 1;
 	object-fit: cover;
-	background-color: #bebebe;
+	background-color: var(--artwork-placeholder);
 }
 
 .trailing-content {
@@ -38,7 +42,7 @@
 	flex-direction: column;
 	flex: 1;
 	min-width: 0;
-	gap: 0.5rem;
+	gap: var(--space-xs);
 	overflow-wrap: anywhere;
 }
 
@@ -48,12 +52,12 @@
 	flex-grow: 0;
 
 	align-items: center;
-	padding: 0.3125rem;
+	padding: calc(var(--density-unit) * 0.3125);
 	border: 1px solid transparent;
 	max-width: 100%;
 
 	flex-direction: row;
-	gap: 0.5rem;
+	gap: var(--space-xs);
 	min-width: 0;
 
 	color: inherit;
@@ -67,10 +71,10 @@
 
 .dj-image {
 	align-self: flex-start;
-	background-color: #bebebe;
+	background-color: var(--artwork-placeholder);
 
-	flex: 0 0 2.5rem;
-	width: 2.5rem;
+	flex: 0 0 calc(var(--density-unit) * 2.5);
+	width: calc(var(--density-unit) * 2.5);
 	aspect-ratio: 1;
 }
 
@@ -84,6 +88,6 @@
 	}
 
 	.show-image {
-		width: min(100%, 20.625rem);
+		width: min(100%, var(--show-artwork-max));
 	}
 }

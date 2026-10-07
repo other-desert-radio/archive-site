@@ -31,10 +31,6 @@
 }
 
 :root {
-	--nav-height: 71px;
-	--tabs-font-size: 2rem;
-	--container-grid-padding-bottom: 120px;
-
 	font-family: "Space Mono", monospace;
 	font-synthesis: none;
 	line-height: 1.5;

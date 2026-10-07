@@ -38,68 +38,19 @@ const hydratedTags = hydrateTags(dj, tags);
   returning_page="djs"
   title={`${dj.title} | Other Desert Radio`}
 >
-  <div class="container">
-    <h1 class="page-title">{dj.title}</h1>
-    <div class="leading-container">
-      <img class="photo" src={`${base}/${dj.image_large}`} alt={dj.title} />
+  <div class="detail-grid">
+    <h1 class="detail-header">{dj.title}</h1>
+    <div class="detail-column">
+      <img class="detail-photo" src={`${base}/${dj.image_large}`} alt={dj.title} />
       <div class="tag-container">
-        {hydratedTags.map((tag) => <TagView tag={tag} size="large" />)}
+        {hydratedTags.map((tag) => <TagView tag={tag} size="normal" />)}
       </div>
       <div set:html={dj.socials} />
     </div>
-    <div class="trailing-container">
+    <div class="detail-column">
       <div set:html={dj.bio} />
       <p>{dj.showTitle}</p>
       <p>{dj.showDescription}</p>
     </div>
   </div>
 </BaseLayout>
-
-<style>
-  .container {
-    display: grid;
-    grid-template-columns: minmax(min(300px, 100%), 300px) minmax(0, 1fr);
-    column-gap: 2rem;
-  }
-
-  .page-title {
-    grid-column: 1 / -1;
-  }
-
-  /* set:html paragraphs do not receive Astro's scoped style attribute. */
-  .container :global(p) {
-    margin: 0 !important;
-  }
-
-  .photo {
-    width: 100%;
-    max-width: 300px;
-    aspect-ratio: 1;
-    background-color: #bebebe;
-    border: 6px solid black;
-  }
-
-  .leading-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .trailing-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  @media (max-width: 750px) {
-    .container {
-      column-gap: 1rem;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .container {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
