@@ -41,7 +41,7 @@ const hydratedTags = hydrateTags(show, tags);
     <div class="detail-column">
       <img class="detail-photo" src={show.image_large} alt={show.title} />
       <div class="tag-container">
-        {hydratedTags.map((tag) => <TagView tag={tag} size="large" />)}
+        {hydratedTags.map((tag) => <TagView tag={tag} size="normal" />)}
       </div>
     </div>
     <div class="detail-column">
@@ -51,6 +51,10 @@ const hydratedTags = hydrateTags(show, tags);
 </BaseLayout>
 
 <style>
-  .detail-grid { --detail-row-gap: var(--space-sm); }
-  .page-title { margin-bottom: 0; }
+  .detail-grid {
+    --detail-row-gap: var(--space-sm);
+  }
+  .page-title {
+    margin-bottom: 0;
+  }
 </style>

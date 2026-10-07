@@ -9,12 +9,12 @@
 	--grid-column-gap: calc(var(--density-unit) * 4);
 	--page-gutter: var(--space-sm);
 	--page-max-width: 120rem;
-	--font-body: var(--density-unit);
+	--font-body: calc(var(--density-unit) * 1.125);
 	--font-small: calc(var(--density-unit) * 0.875);
 	--font-title: calc(var(--density-unit) * 2.5);
 	--tabs-font-size: var(--space-lg);
 	--tag-font-size: calc(var(--density-unit) * 0.85);
-	--tag-large-font-size: calc(var(--density-unit) * 1.2);
+	--tag-large-font-size: calc(var(--density-unit) * 1);
 	--border-secondary: calc(var(--density-unit) * 0.125);
 	--border-primary: calc(var(--density-unit) * 0.1875);
 	--border-heavy: calc(var(--density-unit) * 0.375);
@@ -111,12 +111,15 @@ textarea {
 	row-gap: var(--detail-row-gap, 0);
 	overflow-wrap: anywhere;
 }
+
 .detail-header {
 	grid-column: 1 / -1;
 }
+
 .detail-grid p {
 	margin: 0;
 }
+
 .detail-photo {
 	width: 100%;
 	max-width: var(--detail-artwork-size);
@@ -125,17 +128,20 @@ textarea {
 	background-color: var(--artwork-placeholder);
 	border: var(--border-heavy) solid black;
 }
+
 .detail-column {
 	display: flex;
 	flex-direction: column;
 	min-width: 0;
 	gap: var(--space-sm);
 }
+
 @media (max-width: 750px) {
 	.detail-grid {
 		column-gap: var(--space-sm);
 	}
 }
+
 @media (max-width: 600px) {
 	.detail-grid {
 		grid-template-columns: minmax(0, 1fr);
