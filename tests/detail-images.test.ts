@@ -14,7 +14,7 @@ const escapeAttribute = (value: string) =>
 		.replaceAll("<", "&lt;")
 		.replaceAll(">", "&gt;");
 
-test("built show and DJ detail pages render large artwork with alt text", async () => {
+test("built show and DJ detail pages render large artwork with alt text and large tags", async () => {
 	execFileSync("bun", ["run", "build"], { stdio: "pipe", timeout: 30_000 });
 	const shows = await fetchShows(pathToFileURL("src/res/shows.json"));
 	const djs = await fetchDJs(pathToFileURL("src/res/djs_brief.json"));
@@ -29,6 +29,12 @@ test("built show and DJ detail pages render large artwork with alt text", async 
 			const html = await readFile(
 				`dist/${category}/${record.id}/index.html`,
 				"utf8",
+			);
+			const tags = html.match(/<div\b[^>]*class="tag tag-large"[^>]*>/g) ?? [];
+			assert.equal(
+				tags.length,
+				record.tagIds.length,
+				`${category}/${record.id} should render large tags`,
 			);
 			const image = (html.match(/<img\b[^>]*>/g) ?? []).find((tag) =>
 				tag.includes(

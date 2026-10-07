@@ -15,6 +15,8 @@ Before making changes, read the relevant guidance in [`docs/`](docs/):
   boundaries, review checkpoints, and verification.
 - [`docs/typescript.md`](docs/typescript.md) for TypeScript and component
   contract conventions.
+- [`docs/css.md`](docs/css.md) before CSS changes, for shared variables, units,
+  responsive layouts, and existing breakpoints. Do not invent new query numbers.
 
 Implement one small, independently reviewable feature or behavior at a time.
 Include focused verification and documentation in the same chunk, then stop

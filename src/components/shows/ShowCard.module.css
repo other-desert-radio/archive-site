@@ -1,12 +1,12 @@
 .show-card {
 	display: flex;
 	flex-direction: row;
-	gap: 1.5rem;
+	gap: clamp(1rem, 2vw, 1.5rem);
 	min-width: 0;
 }
 
 .show-title {
-	font-size: 2rem;
+	font-size: clamp(1.5rem, 1.125rem + 1vw, 2rem);
 	margin: 0;
 	font-weight: normal;
 	color: inherit;
@@ -24,15 +24,19 @@
 .show-image {
 	align-self: flex-start;
 
-	flex: 0 0 330px;
-	width: 320px;
+	flex: 0 1 auto;
+	width: clamp(12rem, 40%, 20.625rem);
+	max-width: 100%;
+	height: auto;
 	aspect-ratio: 1;
+	object-fit: cover;
 	background-color: #bebebe;
 }
 
 .trailing-content {
 	display: flex;
 	flex-direction: column;
+	flex: 1;
 	min-width: 0;
 	gap: 0.5rem;
 	overflow-wrap: anywhere;
@@ -44,7 +48,9 @@
 	flex-grow: 0;
 
 	align-items: center;
-	padding: 5px;
+	padding: 0.3125rem;
+	border: 1px solid transparent;
+	max-width: 100%;
 
 	flex-direction: row;
 	gap: 0.5rem;
@@ -55,7 +61,7 @@
 }
 
 .dj-container:hover {
-	border: 1px solid black;
+	border-color: black;
 	background-color: white;
 }
 
@@ -63,11 +69,21 @@
 	align-self: flex-start;
 	background-color: #bebebe;
 
-	flex: 0 0 40px;
-	width: 40px;
+	flex: 0 0 2.5rem;
+	width: 2.5rem;
 	aspect-ratio: 1;
 }
 
 .dj-name-title {
 	font-weight: normal;
+}
+
+@media (max-width: 600px) {
+	.show-card {
+		flex-direction: column;
+	}
+
+	.show-image {
+		width: min(100%, 20.625rem);
+	}
 }

@@ -4,7 +4,15 @@
 	max-width: 100rem;
 	margin-inline: auto;
 	gap: 3rem 4rem;
-	grid-template-columns: repeat(1, minmax(28rem, 1fr));
+	grid-template-columns: repeat(1, minmax(0, 0.9fr));
 
 	padding-bottom: var(--container-grid-padding-bottom);
+}
+
+@media (min-width: 1600px) {
+	.show-container-grid {
+		max-width: none;
+		margin-inline: 0;
+		grid-template-columns: repeat(2, minmax(28rem, 1fr));
+	}
 }

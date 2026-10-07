@@ -4,9 +4,10 @@ import TagView from "./TagView";
 type Props = {
 	tagIds: number[];
 	tags: TagMap;
+	size: "normal" | "large";
 };
 
-export default function TagContainer({ tagIds, tags }: Props) {
+export default function TagContainer({ tagIds, tags, size }: Props) {
 	return (
 		<div className="tag-container">
 			{tagIds.map((id) => {
@@ -17,7 +18,7 @@ export default function TagContainer({ tagIds, tags }: Props) {
 					return null;
 				}
 
-				return <TagView key={tag.id} tag={tag} />;
+				return <TagView key={tag.id} tag={tag} size={size} />;
 			})}
 		</div>
 	);

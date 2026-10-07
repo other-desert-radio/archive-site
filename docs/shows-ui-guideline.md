@@ -373,7 +373,9 @@ sizes. On narrow screens move search to a full-width row, wrap controls and
 chips, then stack artwork above show details. Keep artwork within the viewport,
 scale large headings with a bounded responsive size, and let tags, date, and
 DJ badges wrap. Choose breakpoints based on content fit, not the screenshot's
-fixed coordinates. The existing shell's padding may require a separately
+fixed coordinates, reusing the established breakpoints in
+[css.md](css.md). Do not introduce new query numbers.
+The existing shell's padding may require a separately
 reviewed adjustment if it prevents a usable mobile listing.
 
 Use real labelled inputs and buttons, visible keyboard focus, and at least
