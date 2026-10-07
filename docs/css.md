@@ -49,3 +49,8 @@ tags, at 320px, 332px, 750px, 1440px, and wide desktop widths.
 Category tabs and navigation items wrap naturally when their combined widths
 exceed the available space. Keep each tab and the return link together, and
 allow the navigation title to wrap within its own line on tiny screens.
+
+The archive toolbar search fills the space remaining beside the TAGS and DJ
+buttons rather than using a percentage width cap. At 600px and below, search
+takes its own row. These controls provide presentation only; filtering and
+search validation are implemented separately.

@@ -3,6 +3,7 @@ import { pathToFileURL } from "node:url";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CategoryTabs from "../components/CategoryTabs.astro";
 import ShowsPane from "../components/shows/ShowsPane";
+import Toolbar from "../components/Toolbar.astro";
 import { fetchShows } from "../utils/fetch-shows";
 import { fetchTags } from "../utils/fetch-tags";
 
@@ -18,5 +19,6 @@ const base = import.meta.env.BASE_URL;
   returning_page="home"
 >
   <CategoryTabs active="shows" />
+  <Toolbar active="shows" />
   <ShowsPane base={base} shows={shows} tags={tags} />
 </BaseLayout>

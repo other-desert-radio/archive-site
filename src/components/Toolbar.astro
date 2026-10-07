@@ -1,0 +1,83 @@
+---
+type Props = {
+  active: "shows" | "djs";
+};
+
+const { active } = Astro.props;
+---
+
+<div class="toolbar">
+  <input
+    class="search-box"
+    type="search"
+    name="search"
+    placeholder="SEARCH..."
+    aria-label={`Search ${active}`}
+  />
+  <div class="trailing-toolbar-view">
+    <button class="filter-button" type="button" aria-label="Filter by tags">
+      TAGS <span aria-hidden="true">▼</span>
+    </button>
+    <button class="filter-button" type="button" aria-label="Filter by DJ">
+      DJ <span aria-hidden="true">▼</span>
+    </button>
+  </div>
+</div>
+
+<style>
+  .toolbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: var(--space-sm);
+    position: sticky;
+    top: var(--nav-offset, var(--nav-height));
+    z-index: 90;
+    padding-block: var(--space-sm);
+  }
+  .search-box {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .search-box,
+  .filter-button {
+    appearance: none;
+    border-radius: 0;
+    margin: 0;
+    border: var(--border-primary) solid black;
+    padding: var(--space-xs);
+    background: transparent;
+    color: black;
+    font-family: inherit;
+    font-size: var(--font-body);
+    line-height: 1.2;
+  }
+
+  .search-box::placeholder {
+    color: inherit;
+    opacity: 1;
+  }
+
+  .trailing-toolbar-view {
+    display: flex;
+    gap: var(--space-sm);
+  }
+
+  .filter-button {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    cursor: pointer;
+  }
+
+  @media (max-width: 600px) {
+    .toolbar {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .trailing-toolbar-view {
+      justify-self: start;
+    }
+  }
+</style>
