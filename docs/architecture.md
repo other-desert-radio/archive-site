@@ -54,8 +54,9 @@ As routes are added, place them under `src/pages/` using Astro's file-based rout
 ## Development and quality checks
 
 `BaseLayout.astro` also imports `src/styles/styles.css` for shared typography:
-the root respects the browser font preference, body text uses `1rem` with a
-unitless line height, and headings and small text have rem-based defaults.
+the root respects the browser font preference, while shared rem-based density
+tokens scale body text, headings, spacing, and artwork from 80% on smaller
+viewports to full size at 1800px. Body text retains a unitless line height.
 Form controls inherit the surrounding font. Component styles can override
 these defaults.
 

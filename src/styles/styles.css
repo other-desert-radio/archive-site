@@ -1,19 +1,66 @@
+/* One rem at full density; 80% on phones and laptops. */
+:root {
+	--density-unit: 0.8rem;
+	--space-xs: calc(var(--density-unit) * 0.5);
+	--space-sm: var(--density-unit);
+	--space-md: calc(var(--density-unit) * 1.5);
+	--space-lg: calc(var(--density-unit) * 2);
+	--grid-row-gap: calc(var(--density-unit) * 3);
+	--grid-column-gap: calc(var(--density-unit) * 4);
+	--page-gutter: var(--space-sm);
+	--page-max-width: 120rem;
+	--font-body: var(--density-unit);
+	--font-small: calc(var(--density-unit) * 0.875);
+	--font-title: calc(var(--density-unit) * 2.5);
+	--tabs-font-size: var(--space-lg);
+	--tag-font-size: calc(var(--density-unit) * 0.85);
+	--tag-large-font-size: calc(var(--density-unit) * 1.2);
+	--border-secondary: calc(var(--density-unit) * 0.125);
+	--border-primary: calc(var(--density-unit) * 0.1875);
+	--border-heavy: calc(var(--density-unit) * 0.375);
+	--nav-height: calc(var(--density-unit) * 4.4375);
+	--container-grid-padding-bottom: calc(var(--density-unit) * 7.5);
+	--dj-artwork-size: calc(var(--density-unit) * 12.5);
+	--show-artwork-min: calc(var(--density-unit) * 12);
+	--show-artwork-max: calc(var(--density-unit) * 20.625);
+	--detail-artwork-size: calc(var(--density-unit) * 18.75);
+	--artwork-placeholder: #bebebe;
+}
+
+@media (min-width: 750px) {
+	:root {
+		--page-gutter: var(--grid-column-gap);
+	}
+}
+
+@media (min-width: 1600px) {
+	:root {
+		--density-unit: clamp(0.8rem, calc(0.8rem + 1.6vw - 25.6px), 1rem);
+	}
+}
+
+@media (min-width: 1800px) {
+	:root {
+		--density-unit: 1rem;
+	}
+}
+
 html {
 	font-size: 100%;
 }
 
 body {
-	font-size: 1rem;
+	font-size: var(--font-body);
 	line-height: 1.5;
 }
 
 h1 {
 	font-weight: normal;
-	font-size: 2.5rem;
+	font-size: var(--font-title);
 }
 
 small {
-	font-size: 0.875rem;
+	font-size: var(--font-small);
 }
 
 button,
@@ -29,26 +76,68 @@ textarea {
 }
 
 .tag {
-	padding: 0px 7px;
-	font-size: 0.85rem;
-	border: 2px solid black;
+	padding: 0 calc(var(--density-unit) * 0.4375);
+	font-size: var(--tag-font-size);
+	border: var(--border-secondary) solid black;
 }
 
 .tag-large {
-	font-size: 1.2rem;
+	font-size: var(--tag-large-font-size);
 }
 
 .tag-container {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	gap: 0.5rem;
+	gap: var(--space-xs);
 }
 
 .image-border-primary {
-	border: 3px solid black;
+	border: var(--border-primary) solid black;
 }
 
 .image-border-secondary {
-	border: 2px solid black;
+	border: var(--border-secondary) solid black;
+}
+
+/* Shared show and DJ detail presentation. */
+.detail-grid {
+	display: grid;
+	grid-template-columns: minmax(
+			min(var(--detail-artwork-size), 100%),
+			var(--detail-artwork-size)
+		) minmax(0, 1fr);
+	column-gap: var(--space-lg);
+	row-gap: var(--detail-row-gap, 0);
+	overflow-wrap: anywhere;
+}
+.detail-header {
+	grid-column: 1 / -1;
+}
+.detail-grid p {
+	margin: 0;
+}
+.detail-photo {
+	width: 100%;
+	max-width: var(--detail-artwork-size);
+	aspect-ratio: 1;
+	object-fit: cover;
+	background-color: var(--artwork-placeholder);
+	border: var(--border-heavy) solid black;
+}
+.detail-column {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	gap: var(--space-sm);
+}
+@media (max-width: 750px) {
+	.detail-grid {
+		column-gap: var(--space-sm);
+	}
+}
+@media (max-width: 600px) {
+	.detail-grid {
+		grid-template-columns: minmax(0, 1fr);
+	}
 }
