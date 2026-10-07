@@ -54,3 +54,6 @@ The archive toolbar search fills the space remaining beside the TAGS and DJ
 buttons rather than using a percentage width cap. At 600px and below, search
 takes its own row. These controls provide presentation only; filtering and
 search validation are implemented separately.
+Search and filter buttons share an explicit border-box height derived from
+their font, padding, and border tokens so native input sizing cannot make the
+search field taller, including when the controls occupy separate rows.
