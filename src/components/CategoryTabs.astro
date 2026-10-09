@@ -8,11 +8,13 @@ const { active } = Astro.props;
 ---
 
 <div class="tabs">
+  <a href={base} aria-current={undefined}>EXPLORE</a>
   <a href={base} aria-current={active === "shows" ? "page" : undefined}>SHOWS</a
   >
   <a href={`${base}djs`} aria-current={active === "djs" ? "page" : undefined}
     >DJs</a
   >
+  <a href={base} aria-current={undefined}>FOR YOU</a>
 </div>
 
 <style>
